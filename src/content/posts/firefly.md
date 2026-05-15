@@ -3,13 +3,10 @@ title: Firefly 博客搭建教程
 published: 2026-05-15
 description: 使用github免费搭建一个静态博客Firefly 博客搭建教程
 image: ./cover.jpg
-tags: [Firefly, 博客教程，静态博客，github]
+tags: [Firefly, 博客教程, 静态博客, github]
 category: 博客教程
 draft: false
 ---
-
-# c 博客搭建教程
-
 根据Firefly 官方文档，涵盖全流程操作，代码可直接复制，小白可按步完成，附关键避坑提示。 **说明**：基于 Windows 系统；命令可直接执行。
 
 # 第一篇：前置准备｜安装必备环境
