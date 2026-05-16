@@ -70,17 +70,17 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "欢迎来到戏子的博客!",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"君子之交淡若水，小人之交甘若醴。",
+				"莫愁前路无知已，天下谁人不识君。",
+				"天下快意之事莫若友，快友之事莫若谈。",
+				"君子与君子以同道为朋，小人与小人以同利为朋。",
+				"万两黄金容易得，知心一个也难求。",
+				"若知四海皆兄弟，何处相逢非故人。",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",

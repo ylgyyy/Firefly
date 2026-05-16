@@ -65,36 +65,6 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 		},
 		{
-			// 组件类型：分类组件
-			type: "categories",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: true,
-			// 响应式配置
-			responsive: {
-				// 折叠阈值：当分类数量超过>5个时自动折叠
-				collapseThreshold: 5,
-			},
-		},
-		{
-			// 组件类型：标签组件
-			type: "tags",
-			// 是否启用该组件
-			enable: true,
-			// 组件位置
-			position: "sticky",
-			// 是否在文章详情页显示
-			showOnPostPage: true,
-			// 响应式配置
-			responsive: {
-				// 折叠阈值：当标签数量超过>10个时自动折叠
-				collapseThreshold: 10,
-			},
-		},
-		{
 			// 组件类型：广告栏组件 1
 			type: "advertisement",
 			// 是否启用该组件
@@ -141,6 +111,36 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			showOnPostPage: true,
 			// 是否在非文章详情页显示
 			showOnNonPostPage: false,
+		},
+				{
+			// 组件类型：分类组件
+			type: "categories",
+			// 是否启用该组件
+			enable: true,
+			// 组件位置
+			position: "sticky",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+			// 响应式配置
+			responsive: {
+				// 折叠阈值：当分类数量超过>5个时自动折叠
+				collapseThreshold: 5,
+			},
+		},
+		{
+			// 组件类型：标签组件
+			type: "tags",
+			// 是否启用该组件
+			enable: true,
+			// 组件位置
+			position: "sticky",
+			// 是否在文章详情页显示
+			showOnPostPage: true,
+			// 响应式配置
+			responsive: {
+				// 折叠阈值：当标签数量超过>10个时自动折叠
+				collapseThreshold: 10,
+			},
 		},
 		{
 			// 组件类型：广告栏组件 2
