@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/blog/123.md",
+                "file": "Firefly/src/content/posts/blog/_123.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "123"
+              "title": "_123"
             }
           }
         ]
@@ -196,6 +196,7 @@
   "active": "08edea3560621409",
   "lastOpenFiles": [
     "Firefly/src/content/posts/blog/github.md",
+    "Firefly/src/content/posts/blog/_123.md",
     "src/content/posts/blog/123.md",
     "src/content/posts/blog",
     "Firefly/src/content/posts/guide/cover.avif",

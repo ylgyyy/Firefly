@@ -17,7 +17,7 @@
     {
       "id": "content-1778909036475",
       "name": "日常",
-      "folder": "/src/content/posts/blog",
+      "folder": "Firefly/src/content/posts/blog",
       "linkBasePath": "",
       "template": "---\ntitle: \"{{title}}\"\npublished: \"{{date}}\"\ndescription: 这是文章的简短描述\nimage: ./cover.jpg\ntags: [标签]\ncategory: 分类\ndraft: false\nauthor: xizicc\n---",
       "enabled": true,
