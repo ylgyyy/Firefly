@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "b27db4b48a912b24",
+    "type": "split",
+    "children": [
+      {
+        "id": "559e768281dc57fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08edea3560621409",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Firefly/src/content/posts/blog/_在-linux-上安装-docker-和-docker-compose.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_在-linux-上安装-docker-和-docker-compose"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9d97861f82af783c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce3d12a7da555777",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7c926123ef3eddc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "a7ee852929827f1d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d322326db029b6a6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c19dba2629628037",
+    "type": "split",
+    "children": [
+      {
+        "id": "20c373853b066428",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8a91c3d7be4ee25a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Firefly/src/content/posts/video.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "video 的反向链接列表"
+            }
+          },
+          {
+            "id": "f259af153bc83dbb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Firefly/src/content/posts/video.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "video 的出链列表"
+            }
+          },
+          {
+            "id": "c824691890f1a097",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "9c322a068e9d69c9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "edf6dfa44e13d8ea",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "e916fb364af87653",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "08edea3560621409",
+  "lastOpenFiles": [
+    "Firefly/src/content/posts/blog/_哈哈哈.md",
+    "Firefly/src/content/posts/blog/_在-linux-上安装-docker-和-docker-compose.md",
+    "wrangler.toml",
+    "vercel.json",
+    "tsconfig.json",
+    "svelte.config.js",
+    "src/content/posts/images/vitepress.avif",
+    "src/content/posts/images/right-grid2.avif",
+    "src/content/posts/images/obsidian.avif",
+    "src/content/posts/images/masonry.avif",
+    "src/content/posts/images/left-list.avif",
+    "src/content/posts/images/left-grid3.avif",
+    "src/content/posts/images/github.avif",
+    "src/content/posts/images/firefly3.avif",
+    "src/content/posts/images/firefly2.avif",
+    "src/content/posts/images/firefly1.avif",
+    "src/content/posts/blog/_浏览器窗口动态文字.md",
+    "src/content/posts/blog/_哈哈哈.md",
+    "src/content/posts/blog/github.md",
+    "src/components/pages/gallery/PhotoCard.astro",
+    "src/components/pages/gallery/AlbumCard.astro",
+    "src/components/pages/bangumi/TabNav.astro",
+    "src/components/pages/bangumi/FilterControls.astro",
+    "src/components/pages/bangumi/Card.astro",
+    "src/components/pages/bangumi/BangumiSection.astro",
+    "src/content/spec/guestbook.md",
+    "src/content/spec/about.md",
+    "src/config/README.md",
+    "src/components/README.md",
+    "public/pio/README.md",
+    "README.md",
+    "README.en.md",
+    "CONTRIBUTING.md",
+    "Firefly/src/content/posts/blog/_浏览器窗口动态文字.md",
+    "Firefly/src/content/posts/blog/_123.md",
+    "Firefly/src/content/posts/blog/github.md",
+    "src/content/posts/blog/123.md",
+    "src/content/posts/Untitled.md",
+    "Firefly/src/content/spec/about.md",
+    "Firefly/src/content/posts/firefly.md",
+    "Firefly/src/content/posts/video_bot.md",
+    "Firefly/src/content/spec/guestbook.md",
+    "未命名.canvas",
+    "Firefly/src/content/posts/video.md"
+  ]
+}
