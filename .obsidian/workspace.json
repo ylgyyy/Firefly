@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a7773fce4a371249",
+        "id": "962b287b7f71f878",
         "type": "tabs",
         "children": [
           {
-            "id": "016623466ec5f9dd",
+            "id": "d0bc312215002b22",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -189,7 +189,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "016623466ec5f9dd",
+  "active": "e916fb364af87653",
   "lastOpenFiles": [
     "src/config/README.md",
     "src/content/posts/blog/_在-linux-上安装-docker-和-docker-compose.md",
