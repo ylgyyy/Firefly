@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
 	subtitle: "一个爱分享的博主",
 
 	// 站点 URL
-	site_url: "https://blog.887898.xyz",
+	site_url: "https://blog.trrr.top",
 
 	// 站点描述
 	description:
