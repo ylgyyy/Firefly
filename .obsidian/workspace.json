@@ -11,14 +11,24 @@
             "id": "c01c7c46b79f14f4",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/community-plugins.json",
-                "bFile": ".obsidian/community-plugins.json",
-                "aRef": ""
+                "file": "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "diff",
-              "title": "Diff: community-plugins.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Rclone 挂载 WebDAV 到本地"
             }
           }
         ]
@@ -200,6 +210,9 @@
   },
   "active": "c01c7c46b79f14f4",
   "lastOpenFiles": [
+    "src/content/posts/blog/github.md",
+    "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
+    "github.md",
     "src/config/README.md",
     "src/content/posts/blog/Untitled.md",
     "src/content/posts/blog/123.md",
