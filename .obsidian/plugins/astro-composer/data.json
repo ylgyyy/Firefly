@@ -27,34 +27,6 @@
       "enableUnderscorePrefix": true,
       "useMdxExtension": false,
       "modifiedDateField": ""
-    },
-    {
-      "id": "content-1779008936793",
-      "name": "文章加密",
-      "folder": "Firefly/src/content/posts/blog",
-      "linkBasePath": "",
-      "template": "---\ntitle: \"{{title}}\"\npublished: \"{{date}}\"\ndescription: 这是文章的简短描述\nimage: ./cover.jpg\ntags: [标签]\ncategory: 分类\ndraft: false\nauthor: xizicc\npassword: 密码\n---",
-      "enabled": true,
-      "creationMode": "file",
-      "indexFileName": "",
-      "ignoreSubfolders": false,
-      "enableUnderscorePrefix": true,
-      "useMdxExtension": false,
-      "modifiedDateField": ""
-    },
-    {
-      "id": "content-1779009049105",
-      "name": "密码提示",
-      "folder": "Firefly/src/content/posts/blog",
-      "linkBasePath": "",
-      "template": "---\ntitle: \"{{title}}\"\npublished: \"{{date}}\"\ndescription: 这是文章的简短描述\nimage: ./cover.jpg\ntags: [标签]\ncategory: 分类\ndraft: false\nauthor: xizicc\npassword: 密码\npasswordHint: 密码提示\n---",
-      "enabled": true,
-      "creationMode": "file",
-      "indexFileName": "",
-      "ignoreSubfolders": false,
-      "enableUnderscorePrefix": true,
-      "useMdxExtension": false,
-      "modifiedDateField": ""
     }
   ],
   "migrationCompleted": true,

@@ -1,34 +1,20 @@
 {
   "main": {
-    "id": "9526a612b0791418",
+    "id": "b27db4b48a912b24",
     "type": "split",
     "children": [
       {
-        "id": "39860a4a6386bdb7",
+        "id": "559e768281dc57fb",
         "type": "tabs",
         "children": [
           {
-            "id": "c01c7c46b79f14f4",
+            "id": "08edea3560621409",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Rclone 挂载 WebDAV 到本地"
+              "title": "新标签页"
             }
           }
         ]
@@ -37,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d761ead1bca5d25c",
+    "id": "9d97861f82af783c",
     "type": "split",
     "children": [
       {
-        "id": "6e7a5a43217b1c07",
+        "id": "ce3d12a7da555777",
         "type": "tabs",
         "children": [
           {
-            "id": "bbcad2ea7b63e325",
+            "id": "d7c926123ef3eddc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -58,7 +44,7 @@
             }
           },
           {
-            "id": "2c2e985ff8440777",
+            "id": "a7ee852929827f1d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +61,7 @@
             }
           },
           {
-            "id": "dcc981d3673e4ae4",
+            "id": "d322326db029b6a6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -88,23 +74,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 300
   },
   "right": {
-    "id": "fdd1d7f0c9f38221",
+    "id": "c19dba2629628037",
     "type": "split",
     "children": [
       {
-        "id": "3bd4c20e3727f250",
+        "id": "20c373853b066428",
         "type": "tabs",
         "children": [
           {
-            "id": "19a84e15f2366600",
+            "id": "8a91c3d7be4ee25a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/content/posts/firefly-layout-system.md",
+                "file": "Firefly/src/content/posts/video.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,25 +100,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "firefly-layout-system 的反向链接列表"
+              "title": "video 的反向链接列表"
             }
           },
           {
-            "id": "478dc8304627281a",
+            "id": "f259af153bc83dbb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/content/posts/firefly-layout-system.md",
+                "file": "Firefly/src/content/posts/video.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "firefly-layout-system 的出链列表"
+              "title": "video 的出链列表"
             }
           },
           {
-            "id": "9946650b0b10bc65",
+            "id": "c824691890f1a097",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,7 +133,7 @@
             }
           },
           {
-            "id": "ad200c54997e48af",
+            "id": "9c322a068e9d69c9",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -161,22 +147,21 @@
             }
           },
           {
-            "id": "2074343d1501347c",
+            "id": "edf6dfa44e13d8ea",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/content/posts/firefly-layout-system.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "firefly-layout-system 的大纲"
+              "title": "大纲"
             }
           },
           {
-            "id": "11648fd93db27bea",
+            "id": "e916fb364af87653",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -194,43 +179,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "astro-composer:打开项目终端": false,
-      "astro-composer:编辑 Astro 配置": false,
       "obsidian-git:Open Git source control": false,
-      "lang-plus:I18n+ Dictionary Manager": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian42-brat:BRAT": false
+      "bases:新建数据库": false
     }
   },
-  "active": "c01c7c46b79f14f4",
+  "active": "d7c926123ef3eddc",
   "lastOpenFiles": [
+    "Firefly/src/content/posts/blog/Untitled.md",
+    "Firefly/src/content/posts/blog",
+    "Firefly/src/content/posts",
+    "Firefly/src/content",
+    "Firefly/src",
+    "Firefly",
+    "Firefly/src/content/posts/blog/_浏览器窗口动态文字.md",
+    "Firefly/src/content/posts/blog/_123.md",
+    "Firefly/src/content/posts/blog/_在-linux-上安装-docker-和-docker-compose.md",
+    "Firefly/src/content/posts/blog/_哈哈哈.md",
+    "wrangler.toml",
+    "vercel.json",
+    "tsconfig.json",
+    "svelte.config.js",
+    "src/content/posts/images/vitepress.avif",
+    "src/content/posts/images/right-grid2.avif",
+    "src/content/posts/images/obsidian.avif",
+    "src/content/posts/images/masonry.avif",
+    "src/content/posts/images/left-list.avif",
+    "src/content/posts/images/left-grid3.avif",
+    "src/content/posts/images/github.avif",
+    "src/content/posts/images/firefly3.avif",
+    "src/content/posts/images/firefly2.avif",
+    "src/content/posts/images/firefly1.avif",
+    "src/content/posts/blog/_浏览器窗口动态文字.md",
+    "src/content/posts/blog/_哈哈哈.md",
     "src/content/posts/blog/github.md",
-    "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
-    "github.md",
+    "src/components/pages/gallery/PhotoCard.astro",
+    "src/content/spec/guestbook.md",
+    "src/content/spec/about.md",
     "src/config/README.md",
-    "src/content/posts/blog/Untitled.md",
+    "src/components/README.md",
+    "public/pio/README.md",
+    "README.md",
+    "README.en.md",
+    "CONTRIBUTING.md",
+    "Firefly/src/content/posts/blog/_123.md",
+    "Firefly/src/content/posts/blog/github.md",
     "src/content/posts/blog/123.md",
-    "src/content/posts/blog/biji.md",
-    "src/content/posts/mima/Untitled.md",
-    "src/content/posts/mima",
-    "src/content/posts/blog/one.md",
-    "src/content/posts/blog/wenzhang1.md",
-    "src/content/posts/blog/wenzhang01.md",
-    "src/content/posts/blog/wenzhang.md",
-    "新建文件夹",
-    "src/content/posts/blog/ceshi1.md",
-    "src/content/posts/firefly-layout-system.md",
-    "src/content/posts/encrypted-demo.md",
-    "src/content/posts/firefly.md",
-    "src/content/posts/code-examples.md",
-    "src/content/posts/draft.md",
-    "src/content/posts/blog/.md",
-    "src/content/posts/blog"
+    "src/content/posts/Untitled.md",
+    "Firefly/src/content/spec/about.md",
+    "Firefly/src/content/posts/firefly.md",
+    "Firefly/src/content/posts/video_bot.md",
+    "Firefly/src/content/spec/guestbook.md",
+    "未命名.canvas",
+    "Firefly/src/content/posts/video.md"
   ]
 }
