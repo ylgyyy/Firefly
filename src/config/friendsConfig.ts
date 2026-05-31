@@ -23,9 +23,9 @@ export const friendsPageConfig: FriendsPageConfig = {
 // 友链配置
 export const friendsConfig: FriendLink[] = [
 	{
-		title: "戏子博客",
+		title: "杨了个羊博客",
 		imgurl:
-			"https://img.887858.xyz/i/u/2026/05/15/m6hnet.jpg",
+			"https://img.trrr.top/i/u/2026/05/15/m6hnet.jpg",
 		desc: "一个爱分享的博主。",
 		siteurl: "https://blog.887898.xyz",
 		tags: ["Blog"],
