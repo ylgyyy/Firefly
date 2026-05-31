@@ -13,7 +13,7 @@ draft: false
 ---
 
 ## 1. 安装 Rclone
-
+下载地址：https://box.trrr.top/#/?code=941FF
 将下载好的 `rclone` 二进制文件复制到系统路径并赋予执行权限：
 
 ```bash
