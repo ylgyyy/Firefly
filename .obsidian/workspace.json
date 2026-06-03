@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Firefly/src/content/posts/blog/_安装claude-code的详细教程.md",
+                "file": "src/content/posts/blog/_安装claude-code的详细教程.md",
                 "mode": "source",
                 "source": false
               },
@@ -193,10 +193,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "08edea3560621409",
+  "active": "d7c926123ef3eddc",
   "lastOpenFiles": [
     "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
-    "Firefly/src/content/posts/blog/_安装claude-code的详细教程.md",
+    "src/content/posts/blog/_安装claude-code的详细教程.md",
     "Firefly/src/content/posts/blog",
     "Firefly/src/content/posts",
     "Firefly/src/content",
