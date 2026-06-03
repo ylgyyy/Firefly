@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/posts/blog/_安装claude-code的详细教程.md",
+                "file": "src/content/posts/blog/_如何将本地代码首次推送到-git-hub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_安装claude-code的详细教程"
+              "title": "_如何将本地代码首次推送到-git-hub"
             }
           }
         ]
@@ -196,8 +196,9 @@
   },
   "active": "08edea3560621409",
   "lastOpenFiles": [
-    "src/content/posts/blog/_123.md",
     "src/content/posts/blog/_安装claude-code的详细教程.md",
+    "src/content/posts/blog/_如何将本地代码首次推送到-git-hub.md",
+    "src/content/posts/blog/_123.md",
     "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
     "Firefly/src/content/posts/blog",
     "Firefly/src/content/posts",
@@ -241,7 +242,6 @@
     "Firefly/src/content/spec/about.md",
     "Firefly/src/content/posts/firefly.md",
     "Firefly/src/content/posts/video_bot.md",
-    "Firefly/src/content/spec/guestbook.md",
     "未命名.canvas"
   ]
 }
