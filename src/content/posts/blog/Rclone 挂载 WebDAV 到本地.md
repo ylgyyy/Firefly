@@ -2,7 +2,7 @@
 title: Rclone 挂载 WebDAV 远程存储到本地
 published: 2026-05-31
 description: 本文以挂载 Alist WebDAV 为例，适用于所有支持 WebDAV 协议的远程存储。
-image: ./cover.jpg
+image: "api"
 tags: [rclone, webdav]
 category: 教程
 draft: false

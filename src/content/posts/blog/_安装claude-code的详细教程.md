@@ -2,7 +2,7 @@
 title: 安装claude code的详细教程
 published: 2026-06-03
 description: 安装claude code 的详细方法，手把手教你安装
-image: ./cover.jpg
+image: "api"
 tags:
   - ai
   - claude
@@ -10,10 +10,10 @@ category: 网络智能
 draft: false
 author: 杨
 ---
-Claude Code 是 Anthropic 推出的终端 AI 编程助手，支持 Windows / macOS / Linux。
+
+> Claude Code 是 Anthropic 推出的终端 AI 编程助手，支持 Windows / macOS / Linux。
 
 ---
-
 ## 1. 前置环境
 
 | 依赖                   | 最低版本 | 说明                                                      |
