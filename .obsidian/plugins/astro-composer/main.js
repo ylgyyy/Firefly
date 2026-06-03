@@ -255,12 +255,12 @@ var FileOperations = class {
     var _a;
     const { file, title, type } = options;
     if (!title) {
-      new import_obsidian.Notice(`Title is required to create a ${type}.`);
+      new import_obsidian.Notice(`创建 ${type} 需要输入标题。`);
       return null;
     }
     const contentType = this.getContentType(type);
     if (!contentType && type !== "note") {
-      new import_obsidian.Notice(`Content type ${type} not found.`);
+      new import_obsidian.Notice(`未找到内容类型 ${type}。`);
       return null;
     }
     const kebabTitle = this.createSafeStem(title);
@@ -368,7 +368,7 @@ var FileOperations = class {
       return newFile;
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
-      new import_obsidian.Notice(`Failed to create folder structure: ${errorMessage}.`);
+      new import_obsidian.Notice(`创建文件夹结构失败: ${errorMessage}。`);
       return null;
     }
   }
@@ -395,7 +395,7 @@ var FileOperations = class {
       await this.app.fileManager.renameFile(file, newPath);
       const newFile = this.app.vault.getAbstractFileByPath(newPath);
       if (!(newFile instanceof import_obsidian.TFile)) {
-        new import_obsidian.Notice("Failed to locate renamed file.");
+        new import_obsidian.Notice("找不到重命名后的文件。");
         return null;
       }
       const leaf = this.app.workspace.getLeaf(false);
@@ -429,19 +429,19 @@ var FileOperations = class {
       return newFile;
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
-      new import_obsidian.Notice(`Failed to rename file: ${errorMessage}.`);
+      new import_obsidian.Notice(`重命名文件失败: ${errorMessage}。`);
       return null;
     }
   }
   async renameFile(options) {
     const { file, title, type } = options;
     if (!title) {
-      new import_obsidian.Notice(`Title is required to rename the content.`);
+      new import_obsidian.Notice(`重命名内容需要标题。`);
       return null;
     }
     const contentType = this.getContentType(type);
     if (!contentType && type !== "note") {
-      new import_obsidian.Notice(`Content type ${type} not found.`);
+      new import_obsidian.Notice(`未找到内容类型 ${type}。`);
       return null;
     }
     const kebabTitle = this.createSafeStem(title);
@@ -458,14 +458,14 @@ var FileOperations = class {
     const isIndex = file.basename === indexFileName;
     if (isIndex) {
       if (!file.parent) {
-        new import_obsidian.Notice("Cannot rename: file has no parent folder.");
+        new import_obsidian.Notice("无法重命名: 文件没有父文件夹。");
         return null;
       }
       prefix = file.parent.name.startsWith("_") ? "_" : "";
       const newFolderName = `${prefix}${kebabTitle || "untitled"}`;
       const parentFolder = file.parent.parent;
       if (!parentFolder) {
-        new import_obsidian.Notice("Cannot rename: parent folder has no parent.");
+        new import_obsidian.Notice("无法重命名: 父文件夹没有上层目录。");
         return null;
       }
       let newFolderPath;
@@ -479,19 +479,19 @@ var FileOperations = class {
         await this.app.fileManager.renameFile(file.parent, newFolderPath);
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
-        new import_obsidian.Notice(`Failed to rename folder: ${errorMessage}.`);
+      new import_obsidian.Notice(`重命名文件夹失败: ${errorMessage}。`);
         return null;
       }
       const newFilePath = `${newFolderPath}/${file.name}`;
       const newFile = this.app.vault.getAbstractFileByPath(newFilePath);
       if (!(newFile instanceof import_obsidian.TFile)) {
-        new import_obsidian.Notice("Failed to locate renamed file.");
+        new import_obsidian.Notice("找不到重命名后的文件。");
         return null;
       }
       return newFile;
     } else {
       if (!file.parent) {
-        new import_obsidian.Notice("Cannot rename: file has no parent folder.");
+        new import_obsidian.Notice("无法重命名: 文件没有父文件夹。");
         return null;
       }
       prefix = file.basename.startsWith("_") ? "_" : "";
@@ -503,7 +503,7 @@ var FileOperations = class {
       await this.app.fileManager.renameFile(file, newPath);
       const newFile = this.app.vault.getAbstractFileByPath(newPath);
       if (!(newFile instanceof import_obsidian.TFile)) {
-        new import_obsidian.Notice("Failed to locate renamed file.");
+        new import_obsidian.Notice("找不到重命名后的文件。");
         return null;
       }
       return newFile;
@@ -511,7 +511,7 @@ var FileOperations = class {
   }
   async renameFileStructure(file, kebabTitle, prefix, contentType) {
     if (!file.parent) {
-      new import_obsidian.Notice("Cannot rename: file has no parent folder.");
+      new import_obsidian.Notice("无法重命名: 文件没有父文件夹。");
       return null;
     }
     const indexFileName = (contentType == null ? void 0 : contentType.indexFileName) || "";
@@ -521,7 +521,7 @@ var FileOperations = class {
       const newFolderName = `${prefix}${kebabTitle || "untitled"}`;
       const parentFolder = file.parent.parent;
       if (!parentFolder) {
-        new import_obsidian.Notice("Cannot rename: parent folder has no parent.");
+        new import_obsidian.Notice("无法重命名: 父文件夹没有上层目录。");
         return null;
       }
       let newFolderPath;
@@ -540,12 +540,12 @@ var FileOperations = class {
       } catch (error) {
         console.error("FileOperations: Folder rename failed:", error);
         const errorMessage = error instanceof Error ? error.message : String(error);
-        new import_obsidian.Notice(`Failed to rename folder: ${errorMessage}.`);
+      new import_obsidian.Notice(`重命名文件夹失败: ${errorMessage}。`);
         return null;
       }
       const newFile2 = this.app.vault.getAbstractFileByPath(newFilePath);
       if (!(newFile2 instanceof import_obsidian.TFile)) {
-        new import_obsidian.Notice("Failed to locate renamed file.");
+        new import_obsidian.Notice("找不到重命名后的文件。");
         return null;
       }
       return newFile2;
@@ -569,12 +569,12 @@ var FileOperations = class {
     } catch (error) {
       console.error("FileOperations: File rename failed:", error);
       const errorMessage = error instanceof Error ? error.message : String(error);
-      new import_obsidian.Notice(`Failed to rename file: ${errorMessage}.`);
+      new import_obsidian.Notice(`重命名文件失败: ${errorMessage}。`);
       return null;
     }
     const newFile = this.app.vault.getAbstractFileByPath(newPath);
     if (!(newFile instanceof import_obsidian.TFile)) {
-      new import_obsidian.Notice("Failed to locate renamed file.");
+      new import_obsidian.Notice("找不到重命名后的文件。");
       return null;
     }
     return newFile;
@@ -693,7 +693,7 @@ var TemplateParser = class {
           }
         });
       } catch (e) {
-        new import_obsidian2.Notice("Falling back to template due to parsing error.");
+        new import_obsidian2.Notice("解析错误，回退到模板。");
       }
     }
     const bodyContent = content.slice(propertiesEnd);
@@ -1121,7 +1121,7 @@ var LinkConverter = class {
   convertWikilinksForAstro(editor, file) {
     var _a, _b;
     if (!(file instanceof import_obsidian3.TFile)) {
-      new import_obsidian3.Notice("No active file.");
+      new import_obsidian3.Notice("没有活动文件。");
       return;
     }
     const cursor = editor.getCursor();
@@ -1234,13 +1234,13 @@ var LinkConverter = class {
     }
     editor.setCursor({ line: newLine, ch: newCh });
     if (convertedCount > 0 && skippedCount === 0) {
-      new import_obsidian3.Notice(`Converted ${convertedCount} internal link${convertedCount > 1 ? "s" : ""} for Astro.`);
+      new import_obsidian3.Notice(`已为 Astro 转换 ${convertedCount} 个内部链接。`);
     } else if (convertedCount > 0 && skippedCount > 0) {
-      new import_obsidian3.Notice(`Converted ${convertedCount} link${convertedCount > 1 ? "s" : ""} for Astro. Skipped ${skippedCount} link${skippedCount > 1 ? "s" : ""} outside configured content directories.`);
+      new import_obsidian3.Notice(`已为 Astro 转换 ${convertedCount} 个链接。跳过 ${skippedCount} 个不在已配置内容目录中的链接。`);
     } else if (skippedCount > 0) {
-      new import_obsidian3.Notice(`No links converted. All ${skippedCount} link${skippedCount > 1 ? "s" : ""} are outside configured content directories or are images/external links.`);
+      new import_obsidian3.Notice(`未转换任何链接。所有 ${skippedCount} 个链接都不在已配置的内容目录中，或者是图片/外部链接。`);
     } else {
-      new import_obsidian3.Notice("No internal links found to convert.");
+      new import_obsidian3.Notice("未找到可转换的内部链接。");
     }
   }
 };
@@ -1368,15 +1368,15 @@ var TitleModal = class extends import_obsidian4.Modal {
     if (this.isRename) {
       const typeName = this.getTypeDisplayName();
       if (this.type === "note") {
-        contentEl.createEl("h2", { text: "Rename content" });
-        contentEl.createEl("p", { text: "Enter a title for this content:" });
+        contentEl.createEl("h2", { text: "重命名内容" });
+        contentEl.createEl("p", { text: "输入此内容的标题:" });
       } else {
-        contentEl.createEl("h2", { text: `Rename ${typeName} content` });
-        contentEl.createEl("p", { text: `Enter new title for your ${typeName} content:` });
+        contentEl.createEl("h2", { text: `重命名${typeName}内容` });
+        contentEl.createEl("p", { text: `输入${typeName}内容的新标题:` });
       }
       this.titleInput = contentEl.createEl("input", {
         type: "text",
-        placeholder: "New Title",
+        placeholder: "新标题",
         cls: "astro-composer-title-input"
       });
       void this.getCurrentTitleAsync().then((title) => {
@@ -1385,29 +1385,29 @@ var TitleModal = class extends import_obsidian4.Modal {
     } else if (this.isNewNote) {
       const typeName = this.getTypeDisplayName();
       if (this.type === "note") {
-        contentEl.createEl("h2", { text: "New content" });
-        contentEl.createEl("p", { text: "Enter a title for this content:" });
+        contentEl.createEl("h2", { text: "新建内容" });
+        contentEl.createEl("p", { text: "输入此内容的标题:" });
       } else {
-        contentEl.createEl("h2", { text: `Create new ${typeName} content` });
-        contentEl.createEl("p", { text: `Enter a title for your new ${typeName} content:` });
+        contentEl.createEl("h2", { text: `创建新的${typeName}内容` });
+        contentEl.createEl("p", { text: `输入新${typeName}内容的标题:` });
       }
       this.titleInput = contentEl.createEl("input", {
         type: "text",
-        placeholder: "New Title",
+        placeholder: "新标题",
         cls: "astro-composer-title-input"
       });
     } else {
       const typeName = this.getTypeDisplayName();
       if (this.type === "note") {
-        contentEl.createEl("h2", { text: "New content" });
-        contentEl.createEl("p", { text: "Enter a title for this content:" });
+        contentEl.createEl("h2", { text: "新建内容" });
+        contentEl.createEl("p", { text: "输入此内容的标题:" });
       } else {
-        contentEl.createEl("h2", { text: `Create new ${typeName} content` });
-        contentEl.createEl("p", { text: `Enter a title for your new ${typeName} content:` });
+        contentEl.createEl("h2", { text: `创建新的${typeName}内容` });
+        contentEl.createEl("p", { text: `输入新${typeName}内容的标题:` });
       }
       this.titleInput = contentEl.createEl("input", {
         type: "text",
-        placeholder: "New Title",
+        placeholder: "新标题",
         cls: "astro-composer-title-input"
       });
       if (this.file) {
@@ -1424,9 +1424,9 @@ var TitleModal = class extends import_obsidian4.Modal {
       }, 0);
     }
     const buttonContainer = contentEl.createDiv({ cls: "astro-composer-button-container" });
-    const cancelButton = buttonContainer.createEl("button", { text: "Cancel", cls: "astro-composer-cancel-button" });
+    const cancelButton = buttonContainer.createEl("button", { text: "取消", cls: "astro-composer-cancel-button" });
     cancelButton.onclick = () => this.close();
-    const submitButton = buttonContainer.createEl("button", { text: this.isRename ? "Rename" : "Create", cls: ["astro-composer-create-button", "mod-cta"] });
+    const submitButton = buttonContainer.createEl("button", { text: this.isRename ? "重命名" : "创建", cls: ["astro-composer-create-button", "mod-cta"] });
     submitButton.onclick = () => this.submit();
     this.titleInput.addEventListener("keypress", (e) => {
       if (e.key === "Enter") void this.submit();
@@ -1435,7 +1435,7 @@ var TitleModal = class extends import_obsidian4.Modal {
   async submit() {
     const title = this.titleInput.value.trim();
     if (!title) {
-      new import_obsidian4.Notice("Please enter a title.");
+      new import_obsidian4.Notice("请输入标题。");
       return;
     }
     try {
@@ -1468,14 +1468,14 @@ var TitleModal = class extends import_obsidian4.Modal {
         newFile = await this.createNewFile(title);
       }
       if (!newFile) {
-        new import_obsidian4.Notice(`Failed to ${this.isRename ? "rename" : "create"} ${this.type}.`);
+        new import_obsidian4.Notice(`${this.isRename ? "重命名" : "创建"} ${this.type} 失败。`);
         this.close();
         return;
       }
     } catch (error) {
       console.error("TitleModal: Error during process:", error);
       const errorMessage = error instanceof Error ? error.message : String(error);
-      new import_obsidian4.Notice(`Error ${this.isRename ? "renaming" : "creating"} ${this.type}: ${errorMessage}.`);
+      new import_obsidian4.Notice(`${this.isRename ? "重命名" : "创建"} ${this.type} 出错: ${errorMessage}。`);
       this.close();
       return;
     }
@@ -1483,10 +1483,10 @@ var TitleModal = class extends import_obsidian4.Modal {
   }
   getTypeDisplayName() {
     if (this.type === "note") {
-      return "Content";
+      return "内容";
     }
     const contentType = this.fileOps.getContentType(this.type);
-    return contentType ? contentType.name : "Content";
+    return contentType ? contentType.name : "内容";
   }
   async createNewFile(title) {
     var _a, _b;
@@ -1544,7 +1544,7 @@ var TitleModal = class extends import_obsidian4.Modal {
       return newFile;
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
-      throw new Error(`Failed to create file: ${errorMessage}`);
+      throw new Error(`创建文件失败: ${errorMessage}`);
     }
   }
   generateInitialContent(title) {
@@ -1666,7 +1666,7 @@ function registerCommands(plugin, settings) {
     const linkConverter = new LinkConverter(settings, pluginInterface2);
     plugin.addCommand({
       id: "standardize-properties",
-      name: "Standardize properties",
+      name: "标准化属性",
       icon: "file-check",
       editorCallback: (editor, ctx) => {
         const file = ctx instanceof import_obsidian5.MarkdownView ? ctx.file : ctx.file;
@@ -1678,7 +1678,7 @@ function registerCommands(plugin, settings) {
     });
     plugin.addCommand({
       id: "convert-wikilinks-astro",
-      name: "Convert internal links for Astro",
+      name: "转换内部链接为 Astro 格式",
       icon: "link-2",
       editorCallback: (editor, ctx) => {
         const file = ctx instanceof import_obsidian5.MarkdownView ? ctx.file : ctx.file;
@@ -1689,20 +1689,20 @@ function registerCommands(plugin, settings) {
     });
     plugin.addCommand({
       id: "rename-content",
-      name: "Rename current content",
+      name: "重命名当前内容",
       icon: "pencil",
       editorCallback: (editor, ctx) => {
         const file = ctx instanceof import_obsidian5.MarkdownView ? ctx.file : ctx.file;
         if (file instanceof import_obsidian5.TFile) {
           if (!hasMatchingContentType2(file, settings)) {
-            new import_obsidian5.Notice("Cannot rename: this file is not part of a configured content type folder.");
+            new import_obsidian5.Notice("无法重命名: 此文件不在已配置的内容类型文件夹中。");
             return;
           }
           const type = fileOps.determineType(file);
           const cache = plugin.app.metadataCache.getFileCache(file);
           const titleKey = fileOps.getTitleKey(type);
           if (!(cache == null ? void 0 : cache.frontmatter) || !(titleKey in cache.frontmatter)) {
-            new import_obsidian5.Notice(`Cannot rename: No ${titleKey} found in properties`);
+            new import_obsidian5.Notice(`无法重命名: 属性中未找到 ${titleKey}`);
             return;
           }
           new TitleModal(plugin.app, file, plugin, type, true).open();
@@ -1724,7 +1724,7 @@ function registerCommands(plugin, settings) {
   }
   plugin.addCommand({
     id: "standardize-properties",
-    name: "Standardize properties",
+    name: "标准化属性",
     icon: "file-check",
     editorCallback: (editor, ctx) => {
       const file = ctx instanceof import_obsidian5.MarkdownView ? ctx.file : ctx.file;
@@ -1756,7 +1756,7 @@ function registerCommands(plugin, settings) {
         const currentSettings = pluginInterface.settings || settings;
         const currentFileOps = new FileOperations(plugin.app, currentSettings, pluginInterface);
         if (!hasMatchingContentType(file, currentSettings)) {
-          new import_obsidian5.Notice("Cannot rename: this file is not part of a configured content type folder.");
+          new import_obsidian5.Notice("无法重命名: 此文件不在已配置的内容类型文件夹中。");
           return;
         }
         const type = currentFileOps.determineType(file);
@@ -1767,12 +1767,12 @@ function registerCommands(plugin, settings) {
   if (!isMobile) {
     plugin.addCommand({
       id: "open-project-terminal",
-      name: "Open project terminal",
+      name: "打开项目终端",
       icon: "terminal-square",
       callback: () => {
         const currentSettings = plugin.settings;
         if (!currentSettings.enableOpenTerminalCommand) {
-          new import_obsidian5.Notice("Open terminal command is disabled. Enable it in settings to use this command.");
+          new import_obsidian5.Notice("打开终端命令已禁用。请在设置中启用以使用此命令。");
           return;
         }
         openTerminalInProjectRoot(plugin.app, currentSettings);
@@ -1782,12 +1782,12 @@ function registerCommands(plugin, settings) {
   if (!isMobile) {
     plugin.addCommand({
       id: "edit-astro-config",
-      name: "Edit Astro config",
+      name: "编辑 Astro 配置",
       icon: "rocket",
       callback: async () => {
         const currentSettings = plugin.settings;
         if (!currentSettings.enableOpenConfigFileCommand) {
-          new import_obsidian5.Notice("Edit config file command is disabled. Enable it in settings to use this command.");
+          new import_obsidian5.Notice("编辑配置文件命令已禁用。请在设置中启用以使用此命令。");
           return;
         }
         await openConfigFile(plugin.app, currentSettings);
@@ -1809,17 +1809,17 @@ async function standardizeProperties(app, settings, file, plugin, editor) {
   }
   const type = fileOps.determineType(file);
   if (type === "note") {
-    new import_obsidian5.Notice("No properties template specified for this content. This file doesn't match any configured content type folders.");
+    new import_obsidian5.Notice("此内容未指定属性模板。此文件不匹配任何已配置的内容类型文件夹。");
     return;
   }
   let templateString;
   if (type === "note") {
-    new import_obsidian5.Notice("No properties template specified for this content. This file doesn't match any configured content type folders.");
+    new import_obsidian5.Notice("此内容未指定属性模板。此文件不匹配任何已配置的内容类型文件夹。");
     return;
   }
   const contentType = fileOps.getContentType(type);
   if (!contentType) {
-    new import_obsidian5.Notice("Content type not found.");
+    new import_obsidian5.Notice("未找到内容类型。");
     return;
   }
   templateString = contentType.template;
@@ -1892,12 +1892,12 @@ async function standardizeProperties(app, settings, file, plugin, editor) {
       activeEditor.setCursor({ line: newLine, ch: newCh });
     }
   }
-  new import_obsidian5.Notice("Properties standardized using template.");
+  new import_obsidian5.Notice("已使用模板标准化属性。");
 }
 function renameContentByPath(app, filePath, settings, plugin) {
   const file = app.vault.getAbstractFileByPath(filePath);
   if (!(file instanceof import_obsidian5.TFile)) {
-    new import_obsidian5.Notice(`File not found: ${filePath}`);
+    new import_obsidian5.Notice(`未找到文件: ${filePath}`);
     return;
   }
   const fileOps = new FileOperations(app, settings, plugin);
@@ -1910,7 +1910,7 @@ function renameContentByPath(app, filePath, settings, plugin) {
     return contentType !== null && contentType.enabled;
   }
   if (!hasMatchingContentType(file, settings)) {
-    new import_obsidian5.Notice("Cannot rename: this file is not part of a configured content type folder.");
+    new import_obsidian5.Notice("无法重命名: 此文件不在已配置的内容类型文件夹中。");
     return;
   }
   const type = fileOps.determineType(file);
@@ -1924,7 +1924,7 @@ function registerContentTypeCommands(plugin, settings) {
       continue;
     }
     const commandId = `create-content-type-${contentType.id}`;
-    const commandName = `Create new content type: ${contentType.name}`;
+    const commandName = `创建新的内容类型: ${contentType.name}`;
     plugin.addCommand({
       id: commandId,
       name: commandName,
@@ -1937,7 +1937,7 @@ function registerContentTypeCommands(plugin, settings) {
               await plugin.app.vault.createFolder(targetFolder);
             } catch (error) {
               const errorMessage = error instanceof Error ? error.message : String(error);
-              new import_obsidian5.Notice(`Failed to create folder: ${errorMessage}`);
+              new import_obsidian5.Notice(`创建文件夹失败: ${errorMessage}`);
               return;
             }
           }
@@ -1957,7 +1957,7 @@ function registerContentTypeCommands(plugin, settings) {
           new TitleModal(plugin.app, tempFile, pluginInterface, contentType.id, false, true).open();
         } catch (error) {
           const errorMessage = error instanceof Error ? error.message : String(error);
-          new import_obsidian5.Notice(`Failed to create file: ${errorMessage}`);
+          new import_obsidian5.Notice(`创建文件失败: ${errorMessage}`);
           if (pluginInterface && "pluginCreatedFiles" in pluginInterface) {
             pluginInterface.pluginCreatedFiles.delete(filePath);
           }
@@ -2040,7 +2040,7 @@ function openTerminalInProjectRoot(app, settings) {
   try {
     const cpModule = loadDesktopModule(DESKTOP_MODULES.childProcess);
     if (!cpModule) {
-      new import_obsidian5.Notice("Terminal commands are not supported on this platform.");
+      new import_obsidian5.Notice("此平台不支持终端命令。");
       return;
     }
     const { exec } = cpModule;
@@ -2056,7 +2056,7 @@ function openTerminalInProjectRoot(app, settings) {
     const configuredApp = sanitizeTerminalApp(settings.terminalApplicationName || "");
     const terminalApp = configuredApp || getDefaultTerminalApp();
     if (!configuredApp && !terminalApp) {
-      new import_obsidian5.Notice("Terminal application name is empty. Please configure it in settings.");
+      new import_obsidian5.Notice("终端应用程序名称为空。请在设置中配置。");
       return;
     }
     const platform = process.platform;
@@ -2075,7 +2075,7 @@ function openTerminalInProjectRoot(app, settings) {
                 const fallbackCommand = `start "" cmd.exe /K "cd /d "${escapedPath}""`;
                 exec(fallbackCommand, (cmdError) => {
                   if (cmdError) {
-                    new import_obsidian5.Notice(`Error opening terminal: ${cmdError.message || "Unknown error"}`);
+                    new import_obsidian5.Notice(`打开终端时出错: ${cmdError.message || "未知错误"}`);
                   }
                 });
               }
@@ -2085,7 +2085,7 @@ function openTerminalInProjectRoot(app, settings) {
             const fallbackCommand = `start "" cmd.exe /K "cd /d "${escapedPath}""`;
             exec(fallbackCommand, (cmdError) => {
               if (cmdError) {
-                new import_obsidian5.Notice(`Error opening terminal: ${cmdError.message || "Unknown error"}`);
+                new import_obsidian5.Notice(`打开终端时出错: ${cmdError.message || "未知错误"}`);
               }
             });
           }
@@ -2096,7 +2096,7 @@ function openTerminalInProjectRoot(app, settings) {
         terminalLogger.log("Windows launch (powershell)", { command, projectPath });
         exec(command, (error) => {
           if (error) {
-            new import_obsidian5.Notice(`Error opening terminal: ${error.message || "Unknown error"}`);
+            new import_obsidian5.Notice(`打开终端时出错: ${error.message || "未知错误"}`);
           }
         });
       } else if (lowerApp === "cmd.exe" || lowerApp === "cmd") {
@@ -2104,7 +2104,7 @@ function openTerminalInProjectRoot(app, settings) {
         terminalLogger.log("Windows launch (cmd)", { command, projectPath });
         exec(command, (error) => {
           if (error) {
-            new import_obsidian5.Notice(`Error opening terminal: ${error.message || "Unknown error"}`);
+            new import_obsidian5.Notice(`打开终端时出错: ${error.message || "未知错误"}`);
           }
         });
       } else {
@@ -2116,7 +2116,7 @@ function openTerminalInProjectRoot(app, settings) {
             const fallbackCommand = `start "" cmd.exe /K "cd /d "${escapedPath}""`;
             exec(fallbackCommand, (cmdError) => {
               if (cmdError) {
-                new import_obsidian5.Notice(`Error opening terminal: ${cmdError.message || "Unknown error"}`);
+                new import_obsidian5.Notice(`打开终端时出错: ${cmdError.message || "未知错误"}`);
               }
             });
           }
@@ -2129,7 +2129,7 @@ function openTerminalInProjectRoot(app, settings) {
       terminalLogger.log("macOS launch", { command, terminalApp, projectPath });
       exec(command, (error) => {
         if (error) {
-          new import_obsidian5.Notice(`Error opening terminal: ${error.message || "Unknown error"}`);
+          new import_obsidian5.Notice(`打开终端时出错: ${error.message || "未知错误"}`);
         }
       });
     } else {
@@ -2137,7 +2137,7 @@ function openTerminalInProjectRoot(app, settings) {
       const projectPathEscaped = projectPath.replace(/"/g, '\\"');
       const tryTerminal = (index) => {
         if (index >= terminals.length) {
-          new import_obsidian5.Notice("No supported terminal found. Please install a terminal application or configure one in settings.");
+          new import_obsidian5.Notice("未找到支持的终端。请安装终端应用程序或在设置中配置。");
           return;
         }
         const currentTerminal = terminals[index];
@@ -2158,7 +2158,7 @@ function openTerminalInProjectRoot(app, settings) {
                 terminalLogger.log("Terminal launch failed, trying next", { terminal: currentTerminal, error: execError.message });
                 tryTerminal(index + 1);
               } else if (execError) {
-                new import_obsidian5.Notice(`Error opening terminal: ${execError.message || "Unknown error"}`);
+                new import_obsidian5.Notice(`打开终端时出错: ${execError.message || "未知错误"}`);
               }
             });
           } else {
@@ -2171,14 +2171,14 @@ function openTerminalInProjectRoot(app, settings) {
     }
   } catch (error) {
     terminalLogger.log("Unexpected error", { error });
-    new import_obsidian5.Notice(`Error opening terminal: ${error instanceof Error ? error.message : String(error)}`);
+    new import_obsidian5.Notice(`打开终端时出错: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 async function openConfigFile(app, settings) {
   try {
     const electronModule = loadDesktopModule(DESKTOP_MODULES.electron);
     if (!electronModule) {
-      new import_obsidian5.Notice("Opening files in an external editor is not supported on this platform.");
+      new import_obsidian5.Notice("此平台不支持在外部编辑器中打开文件。");
       return;
     }
     const { shell } = electronModule;
@@ -2186,16 +2186,16 @@ async function openConfigFile(app, settings) {
     const vaultPath = adapter.basePath || adapter.path;
     const vaultPathString = typeof vaultPath === "string" ? vaultPath : String(vaultPath);
     if (!settings.configFilePath || !settings.configFilePath.trim()) {
-      new import_obsidian5.Notice("Please specify a config file path in settings.");
+      new import_obsidian5.Notice("请在设置中指定配置文件路径。");
       return;
     }
     const configPath = resolveFsPath(vaultPathString, settings.configFilePath);
     const result = await shell.openPath(configPath);
     if (result) {
-      new import_obsidian5.Notice(`Could not open config file: ${result}`);
+      new import_obsidian5.Notice(`无法打开配置文件: ${result}`);
     }
   } catch (error) {
-    new import_obsidian5.Notice(`Error opening config file: ${error instanceof Error ? error.message : String(error)}`);
+    new import_obsidian5.Notice(`打开配置文件时出错: ${error instanceof Error ? error.message : String(error)}`);
   }
 }
 
@@ -2476,7 +2476,7 @@ var IconPickerModal = class extends import_obsidian7.FuzzySuggestModal {
 // src/ui/components/ConfirmModal.ts
 var import_obsidian8 = require("obsidian");
 var ConfirmModal = class extends import_obsidian8.Modal {
-  constructor(app, message, confirmText = "Confirm", cancelText = "Cancel") {
+  constructor(app, message, confirmText = "确认", cancelText = "取消") {
     super(app);
     this.message = message;
     this.confirmText = confirmText;
@@ -2565,7 +2565,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
     var _a;
     const generalGroup = new import_obsidian9.SettingGroup(containerEl);
     generalGroup.addSetting((setting) => {
-      setting.setName("Date format").setDesc("Format for the date in properties (yyyy-mm-dd, MMMM D, yyyy, yyyy-mm-dd HH:mm)").addText(
+      setting.setName("日期格式").setDesc("属性中日期的格式 (yyyy-mm-dd, MMMM D, yyyy, yyyy-mm-dd HH:mm)").addText(
         (text) => text.setPlaceholder("YYYY-MM-DD").setValue(settings.dateFormat).onChange(async (value) => {
           settings.dateFormat = value || "YYYY-MM-DD";
           await this.plugin.saveSettings();
@@ -2573,7 +2573,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     generalGroup.addSetting((setting) => {
-      setting.setName("Enable copy heading links").setDesc("Add right-click context menu option to copy heading links in various formats.").addToggle(
+      setting.setName("启用复制标题链接").setDesc("添加右键菜单选项，以多种格式复制标题链接。").addToggle(
         (toggle) => toggle.setValue(settings.enableCopyHeadingLink).onChange(async (value) => {
           settings.enableCopyHeadingLink = value;
           await this.plugin.saveSettings();
@@ -2582,8 +2582,8 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     generalGroup.addSetting((setting) => {
-      setting.setName("Default heading link format").setDesc("Choose the default format for copied heading links. Obsidian format respects your Obsidian settings for wikilink vs Markdown preference. Astro link uses your link base path from above and converts the heading into kebab-case format as an anchor link").addDropdown(
-        (dropdown) => dropdown.addOption("obsidian", "Obsidian link").addOption("astro", "Astro link").setValue(settings.copyHeadingLinkFormat).onChange(async (value) => {
+      setting.setName("默认标题链接格式").setDesc("选择复制标题链接的默认格式。Obsidian 格式会遵循你的 wikilink 与 Markdown 偏好设置。Astro 链接使用上方的基础路径，并将标题转换为 kebab-case 格式的锚点链接").addDropdown(
+        (dropdown) => dropdown.addOption("obsidian", "Obsidian 链接").addOption("astro", "Astro 链接").setValue(settings.copyHeadingLinkFormat).onChange(async (value) => {
           settings.copyHeadingLinkFormat = value;
           await this.plugin.saveSettings();
         })
@@ -2592,7 +2592,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       setting.settingEl.classList.toggle("astro-composer-setting-container-hidden", !settings.enableCopyHeadingLink);
     });
     generalGroup.addSetting((setting) => {
-      setting.setName("Add trailing slash to links").setDesc("Add trailing slashes to all converted internal links (/about/ instead of /about).").addToggle(
+      setting.setName("链接添加尾部斜杠").setDesc("为所有转换后的内部链接添加尾部斜杠（/about/ 而非 /about）。").addToggle(
         (toggle) => toggle.setValue(settings.addTrailingSlashToLinks).onChange(async (value) => {
           settings.addTrailingSlashToLinks = value;
           await this.plugin.saveSettings();
@@ -2600,7 +2600,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     generalGroup.addSetting((setting) => {
-      setting.setName("Process background file changes").setDesc("Automatically process new files when they're changed in the background (by Git or other plugins). Disable to prevent modal spam when files are already processed on other devices during a sync.").addToggle(
+      setting.setName("处理后台文件变更").setDesc("当文件在后台被更改时（由 Git 或其他插件）自动处理新文件。禁用以防止在同步期间其他设备已处理文件时出现弹窗干扰。").addToggle(
         (toggle) => toggle.setValue(settings.processBackgroundFileChanges).onChange(async (value) => {
           settings.processBackgroundFileChanges = value;
           await this.plugin.saveSettings();
@@ -2608,16 +2608,16 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     generalGroup.addSetting((setting) => {
-      setting.setName("Show MDX files in file explorer").setDesc("Make .mdx files visible in Obsidian's file explorer. Requires reload to take effect.").addToggle(
+      setting.setName("在文件浏览器中显示 MDX 文件").setDesc("使 .mdx 文件在 Obsidian 的文件浏览器中可见。需要重新加载才能生效。").addToggle(
         (toggle) => toggle.setValue(settings.showMdxFilesInExplorer).onChange(async (value) => {
           settings.showMdxFilesInExplorer = value;
           await this.plugin.saveSettings();
         })
       );
     });
-    const automationGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("Property automation");
+    const automationGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("属性自动化");
     automationGroup.addSetting((setting) => {
-      setting.setName("Auto-insert properties").setDesc("Automatically insert the properties template when creating new files.").addToggle(
+      setting.setName("自动插入属性").setDesc("创建新文件时自动插入属性模板。").addToggle(
         (toggle) => toggle.setValue(settings.autoInsertProperties).onChange(async (value) => {
           settings.autoInsertProperties = value;
           await this.plugin.saveSettings();
@@ -2625,7 +2625,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     automationGroup.addSetting((setting) => {
-      setting.setName("Rename file on title property click").setDesc("When enabled, clicking into the title property will trigger the rename file command, keeping the file slug in sync.").addToggle(
+      setting.setName("点击标题属性时重命名文件").setDesc("启用后，点击标题属性将触发重命名文件命令，保持文件 slug 同步。").addToggle(
         (toggle) => toggle.setValue(settings.renameOnTitleClick).onChange(async (value) => {
           settings.renameOnTitleClick = value;
           await this.plugin.saveSettings();
@@ -2633,7 +2633,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       );
     });
     automationGroup.addSetting((setting) => {
-      setting.setName("Update date on publish").setDesc("Update 'date' property when switching from draft to published status.").addToggle(
+      setting.setName("发布时更新日期").setDesc("从草稿状态切换到发布状态时更新 'date' 属性。").addToggle(
         (toggle) => toggle.setValue(settings.syncDraftDate).onChange(async (value) => {
           settings.syncDraftDate = value;
           await this.plugin.saveSettings();
@@ -2645,8 +2645,8 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
     });
     if (settings.syncDraftDate) {
       automationGroup.addSetting((setting) => {
-        setting.setName("Draft detection mode").setDesc("How draft status is determined. Property-based uses a boolean property (draft: true). Underscore prefix uses the file name (_my-post.md = draft).").addDropdown(
-          (dropdown) => dropdown.addOption("property", "Property-based").addOption("underscore-prefix", "Underscore prefix").setValue(settings.draftDetectionMode || "property").onChange(async (value) => {
+        setting.setName("草稿检测模式").setDesc("草稿状态的判断方式。基于属性使用布尔属性（draft: true）。下划线前缀使用文件名判断（_my-post.md = 草稿）。").addDropdown(
+          (dropdown) => dropdown.addOption("property", "基于属性").addOption("underscore-prefix", "下划线前缀").setValue(settings.draftDetectionMode || "property").onChange(async (value) => {
             var _a2;
             settings.draftDetectionMode = value;
             await this.plugin.saveSettings();
@@ -2659,7 +2659,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       });
       if (settings.draftDetectionMode !== "underscore-prefix") {
         automationGroup.addSetting((setting) => {
-          setting.setName("Draft property name").setDesc("The property field to use for draft status.").addText(
+          setting.setName("草稿属性名称").setDesc("用于草稿状态的属性字段。").addText(
             (text) => text.setPlaceholder("Draft").setValue(settings.draftProperty || "").onChange(async (value) => {
               var _a2;
               settings.draftProperty = value;
@@ -2669,8 +2669,8 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
           );
         });
         automationGroup.addSetting((setting) => {
-          setting.setName("Draft logic").setDesc("Whether the property value 'true' means it is a draft or published.").addDropdown(
-            (dropdown) => dropdown.addOption("true-is-draft", "True = draft").addOption("false-is-draft", "True = published").setValue(settings.draftLogic || "true-is-draft").onChange(async (value) => {
+          setting.setName("草稿逻辑").setDesc("属性值'true'表示草稿还是已发布。").addDropdown(
+            (dropdown) => dropdown.addOption("true-is-draft", "True = 草稿").addOption("false-is-draft", "True = 已发布").setValue(settings.draftLogic || "true-is-draft").onChange(async (value) => {
               var _a2;
               settings.draftLogic = value;
               await this.plugin.saveSettings();
@@ -2680,7 +2680,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         });
       }
       automationGroup.addSetting((setting) => {
-        setting.setName("Published date property name").setDesc("The property field to update when published ('date' or 'pubdate').").addText(
+        setting.setName("发布日期属性名称").setDesc("发布时要更新的属性字段（'date' 或 'pubdate'）。").addText(
           (text) => text.setPlaceholder("Date").setValue(settings.publishDateField || "").onChange(async (value) => {
             settings.publishDateField = value;
             await this.plugin.saveSettings();
@@ -2688,7 +2688,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         );
       });
     }
-    const contentTypesGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("Content types");
+    const contentTypesGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("内容类型");
     contentTypesGroup.addSetting((setting) => {
       setting.settingEl.addClass("astro-composer-setting-hidden-elements");
       setting.settingEl.addClass("astro-composer-setting-container-full-width");
@@ -2700,9 +2700,9 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       this.renderCustomContentTypes();
     }
     if (!import_obsidian9.Platform.isMobile) {
-      const developerGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("Developer commands");
+      const developerGroup = new import_obsidian9.SettingGroup(containerEl).setHeading("开发者命令");
       developerGroup.addSetting((setting) => {
-        setting.setName("Enable open terminal command").setDesc("Enable command to open terminal in project root directory.").addToggle(
+        setting.setName("启用打开终端命令").setDesc("启用在项目根目录中打开终端的命令。").addToggle(
           (toggle) => toggle.setValue(settings.enableOpenTerminalCommand).onChange(async (value) => {
             settings.enableOpenTerminalCommand = value;
             await this.plugin.saveSettings();
@@ -2718,9 +2718,9 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       this.terminalCommandContainer.classList.toggle("astro-composer-setting-container-hidden", !settings.enableOpenTerminalCommand);
       developerGroup.addSetting((setting) => {
         const descFragment = activeDocument.createDocumentFragment();
-        descFragment.createEl("div", { text: 'Path relative to the Obsidian vault root folder. For two levels up, use "../..". Leave blank to use the vault folder' });
-        descFragment.createEl("div", { text: "This is where the terminal will open. Absolute paths work also." });
-        setting.setName("Project root directory path").setDesc(descFragment).addText(
+        descFragment.createEl("div", { text: '相对于 Obsidian 仓库根文件夹的路径。向上两级请使用 "../.."。留空则使用仓库文件夹' });
+        descFragment.createEl("div", { text: "这是终端将打开的位置。绝对路径同样有效。" });
+        setting.setName("项目根目录路径").setDesc(descFragment).addText(
           (text) => text.setPlaceholder("../..").setValue(settings.terminalProjectRootPath).onChange(async (value) => {
             settings.terminalProjectRootPath = value;
             await this.plugin.saveSettings();
@@ -2731,9 +2731,9 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       });
       developerGroup.addSetting((setting) => {
         const descFragment = activeDocument.createDocumentFragment();
-        descFragment.createEl("div", { text: "Leave blank to use platform defaults. On macOS, the default is Terminal. On Windows, it's Windows Terminal (Win 11) or cmd.exe (Win 10). On Linux, it's gnome-terminal, konsole, or xterm" });
-        descFragment.createEl("div", { text: "Examples include terminal, iTerm, PowerShell, and Alacritty" });
-        setting.setName("Terminal application name").setDesc(descFragment).addText(
+        descFragment.createEl("div", { text: "留空则使用平台默认值。macOS 默认为 Terminal。Windows 默认为 Windows Terminal (Win 11) 或 cmd.exe (Win 10)。Linux 默认为 gnome-terminal、konsole 或 xterm" });
+        descFragment.createEl("div", { text: "例如 terminal、iTerm、PowerShell 和 Alacritty" });
+        setting.setName("终端应用程序名称").setDesc(descFragment).addText(
           (text) => text.setPlaceholder("Terminal").setValue(settings.terminalApplicationName).onChange(async (value) => {
             settings.terminalApplicationName = value;
             await this.plugin.saveSettings();
@@ -2743,7 +2743,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         setting.settingEl.classList.toggle("astro-composer-setting-container-hidden", !settings.enableOpenTerminalCommand);
       });
       developerGroup.addSetting((setting) => {
-        setting.setName("Enable debug logging").setDesc("Log terminal launch commands and platform decisions to the developer console for troubleshooting.").addToggle(
+        setting.setName("启用调试日志").setDesc("将终端启动命令和平台决策记录到开发者控制台以供排查。").addToggle(
           (toggle) => toggle.setValue(settings.enableTerminalDebugLogging).onChange(async (value) => {
             settings.enableTerminalDebugLogging = value;
             await this.plugin.saveSettings();
@@ -2753,7 +2753,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         setting.settingEl.classList.toggle("astro-composer-setting-container-hidden", !settings.enableOpenTerminalCommand);
       });
       developerGroup.addSetting((setting) => {
-        setting.setName("Show open terminal ribbon icon").setDesc("Add a ribbon icon to launch the terminal command.").addToggle((toggle) => {
+        setting.setName("显示打开终端功能区图标").setDesc("添加功能区图标以启动终端命令。").addToggle((toggle) => {
           this.terminalRibbonToggleComponent = toggle;
           toggle.setValue(settings.enableTerminalRibbonIcon).setDisabled(!settings.enableOpenTerminalCommand).onChange(async (value) => {
             this.plugin.settings.enableTerminalRibbonIcon = value;
@@ -2771,7 +2771,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         this.terminalRibbonToggle = setting;
       });
       developerGroup.addSetting((setting) => {
-        setting.setName("Enable edit config file command").setDesc("Enable command to open Astro config file in default editor.").addToggle(
+        setting.setName("启用编辑配置文件命令").setDesc("启用在默认编辑器中打开 Astro 配置文件的命令。").addToggle(
           (toggle) => toggle.setValue(settings.enableOpenConfigFileCommand).onChange(async (value) => {
             settings.enableOpenConfigFileCommand = value;
             await this.plugin.saveSettings();
@@ -2787,9 +2787,9 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       this.configCommandContainer.classList.toggle("astro-composer-setting-container-hidden", !settings.enableOpenConfigFileCommand);
       developerGroup.addSetting((setting) => {
         const descFragment = activeDocument.createDocumentFragment();
-        descFragment.createEl("div", { text: "Path to the config file relative to the vault root. Use ../config.ts or ../../astro.config.mjs." });
-        descFragment.createEl("div", { text: "Absolute paths work also." });
-        setting.setName("Config file path").setDesc(descFragment).addText(
+        descFragment.createEl("div", { text: "配置文件相对于仓库根目录的路径。使用 ../config.ts 或 ../../astro.config.mjs。" });
+        descFragment.createEl("div", { text: "绝对路径同样有效。" });
+        setting.setName("配置文件路径").setDesc(descFragment).addText(
           (text) => text.setPlaceholder("../config.ts").setValue(settings.configFilePath).onChange(async (value) => {
             settings.configFilePath = value;
             await this.plugin.saveSettings();
@@ -2799,7 +2799,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         setting.settingEl.classList.toggle("astro-composer-setting-container-hidden", !settings.enableOpenConfigFileCommand);
       });
       developerGroup.addSetting((setting) => {
-        setting.setName("Show open config ribbon icon").setDesc("Add a ribbon icon to launch the config file command.").addToggle((toggle) => {
+        setting.setName("显示打开配置文件功能区图标").setDesc("添加功能区图标以启动配置文件命令。").addToggle((toggle) => {
           this.configRibbonToggleComponent = toggle;
           toggle.setValue(settings.enableConfigRibbonIcon).setDisabled(!settings.enableOpenConfigFileCommand).onChange(async (value) => {
             this.plugin.settings.enableConfigRibbonIcon = value;
@@ -2817,7 +2817,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         this.configRibbonToggle = setting;
       });
       developerGroup.addSetting((setting) => {
-        setting.setName("Swap out help button for custom action").setDesc("Replace the help button in the vault profile area with a custom action.").addToggle((toggle) => {
+        setting.setName("替换帮助按钮为自定义操作").setDesc("将仓库个人资料区域的帮助按钮替换为自定义操作。").addToggle((toggle) => {
           var _a2, _b;
           return toggle.setValue((_b = (_a2 = settings.helpButtonReplacement) == null ? void 0 : _a2.enabled) != null ? _b : false).onChange(async (value) => {
             if (!settings.helpButtonReplacement) {
@@ -2839,7 +2839,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       if ((_a = settings.helpButtonReplacement) == null ? void 0 : _a.enabled) {
         const commandName = this.getCommandName(settings.helpButtonReplacement.commandId);
         developerGroup.addSetting((setting) => {
-          setting.setName("Command").setDesc("Select the command to execute when the button is clicked.").addButton((button) => button.setButtonText(commandName || "Select command").onClick(() => {
+          setting.setName("命令").setDesc("选择点击按钮时执行的命令。").addButton((button) => button.setButtonText(commandName || "选择命令").onClick(() => {
             const modal = new CommandPickerModal(this.app, (commandId) => {
               void (async () => {
                 if (!settings.helpButtonReplacement) {
@@ -2862,7 +2862,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         });
         const iconName = this.getIconName(settings.helpButtonReplacement.iconId);
         developerGroup.addSetting((setting) => {
-          setting.setName("Icon").setDesc("Select the icon to display on the button.").addButton((button) => button.setButtonText(iconName || "Select icon...").onClick(() => {
+          setting.setName("图标").setDesc("选择按钮上显示的图标。").addButton((button) => button.setButtonText(iconName || "选择图标...").onClick(() => {
             const modal = new IconPickerModal(this.app, (iconId) => {
               void (async () => {
                 if (!settings.helpButtonReplacement) {
@@ -3011,7 +3011,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       header.classList.add("astro-composer-custom-type-header");
       const collapseButton = header.createEl("button", {
         cls: "astro-composer-collapse-button",
-        attr: { "aria-label": "Collapse/expand" }
+        attr: { "aria-label": "折叠/展开" }
       });
       const isCollapsed = (_a = customType.collapsed) != null ? _a : false;
       (0, import_obsidian9.setIcon)(collapseButton, "chevron-down");
@@ -3034,7 +3034,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       const reorderContainer = header.createDiv({ cls: "astro-composer-reorder-buttons" });
       const upButton = reorderContainer.createEl("button", {
         cls: "astro-composer-reorder-button",
-        attr: { "aria-label": "Move up" }
+        attr: { "aria-label": "上移" }
       });
       (0, import_obsidian9.setIcon)(upButton, "chevron-up");
       upButton.disabled = index === 0;
@@ -3043,7 +3043,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       });
       const downButton = reorderContainer.createEl("button", {
         cls: "astro-composer-reorder-button",
-        attr: { "aria-label": "Move down" }
+        attr: { "aria-label": "下移" }
       });
       (0, import_obsidian9.setIcon)(downButton, "chevron-down");
       downButton.disabled = index === contentTypes.length - 1;
@@ -3100,16 +3100,16 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
         settingsContainer.classList.add("astro-composer-setting-container-hidden");
       }
       const nameContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(nameContainer).setName("Content type name").setDesc("Display name for this content type ('projects', 'notes', 'tutorials')").addText((text) => {
-        text.setPlaceholder("Enter content type name").setValue(customType.name).onChange(async (value) => {
+      new import_obsidian9.Setting(nameContainer).setName("内容类型名称").setDesc("此内容类型的显示名称（如 'projects', 'notes', 'tutorials'）").addText((text) => {
+        text.setPlaceholder("输入内容类型名称").setValue(customType.name).onChange(async (value) => {
           customType.name = value;
           await this.plugin.saveSettings();
           registerContentTypeCommands(this.plugin, this.plugin.settings);
         });
       });
       const folderContainer = settingsContainer.createDiv();
-      const folderSetting = new import_obsidian9.Setting(folderContainer).setName("Folder location").setDesc("Folder path where this content type will be created. Leave blank to use the vault folder. Supports wildcards like directory/* or directory/*/* to match specific folder depths.").addText((text) => {
-        text.setPlaceholder("Enter folder path ('docs', 'docs/*', 'docs/*/*') or leave blank for vault root").setValue(customType.folder).onChange(async (value) => {
+      const folderSetting = new import_obsidian9.Setting(folderContainer).setName("文件夹位置").setDesc("此内容类型创建时的文件夹路径。留空则使用仓库根文件夹。支持通配符，如 directory/* 或 directory/*/* 以匹配特定文件夹深度。").addText((text) => {
+        text.setPlaceholder("输入文件夹路径（'docs', 'docs/*', 'docs/*/*'）或留空使用仓库根目录").setValue(customType.folder).onChange(async (value) => {
           customType.folder = value;
           await this.plugin.saveSettings();
           this.plugin.registerCreateEvent();
@@ -3126,29 +3126,29 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       ignoreSubfoldersContainer.setAttribute("data-type-id", customType.id);
       ignoreSubfoldersContainer.classList.toggle("astro-composer-setting-container-visible", !!customType.folder);
       ignoreSubfoldersContainer.classList.toggle("astro-composer-setting-container-hidden", !customType.folder);
-      new import_obsidian9.Setting(ignoreSubfoldersContainer).setName("Ignore subfolders").setDesc("When enabled, automation will only trigger for new .md files within this content type's folder and one level down (for folder-based content). Files in deeper subfolders will be ignored.").addToggle(
+      new import_obsidian9.Setting(ignoreSubfoldersContainer).setName("忽略子文件夹").setDesc("启用后，自动化仅对此内容类型文件夹内及下一级（文件夹模式）的新 .md 文件生效。更深层子文件夹中的文件将被忽略。").addToggle(
         (toggle2) => toggle2.setValue(customType.ignoreSubfolders || false).onChange(async (value) => {
           customType.ignoreSubfolders = value;
           await this.plugin.saveSettings();
         })
       );
       const underscorePrefixContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(underscorePrefixContainer).setName("Use underscore prefix for drafts").setDesc("Add an underscore prefix (_content-title) to new notes by default when enabled. This hides them from Astro, which can be helpful for drafts").addToggle(
+      new import_obsidian9.Setting(underscorePrefixContainer).setName("草稿使用下划线前缀").setDesc("启用后默认给新笔记添加下划线前缀（_content-title）。这会在 Astro 中隐藏它们，适用于草稿。").addToggle(
         (toggle2) => toggle2.setValue(customType.enableUnderscorePrefix || false).onChange(async (value) => {
           customType.enableUnderscorePrefix = value;
           await this.plugin.saveSettings();
         })
       );
       const linkContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(linkContainer).setName("Link base path").setDesc("Base path for converted links ('/projects/', '/notes/tutorials/', leave blank for root /).").addText((text) => {
-        text.setPlaceholder("Enter link base path").setValue(customType.linkBasePath || "").onChange(async (value) => {
+      new import_obsidian9.Setting(linkContainer).setName("链接基础路径").setDesc("转换后链接的基础路径（如 '/projects/', '/notes/tutorials/'，留空则为根路径 /）。").addText((text) => {
+        text.setPlaceholder("输入链接基础路径").setValue(customType.linkBasePath || "").onChange(async (value) => {
           customType.linkBasePath = value;
           await this.plugin.saveSettings();
         });
       });
       const creationModeContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(creationModeContainer).setName("Creation mode").setDesc("How to create new entries: file-based or folder-based with an index file.").addDropdown(
-        (dropdown) => dropdown.addOption("file", "File-based (content-title.md)").addOption("folder", "Folder-based (content-title/index.md)").setValue(customType.creationMode).onChange(async (value) => {
+      new import_obsidian9.Setting(creationModeContainer).setName("创建模式").setDesc("如何创建新条目: 基于文件或基于文件夹含索引文件。").addDropdown(
+        (dropdown) => dropdown.addOption("file", "基于文件 (content-title.md)").addOption("folder", "基于文件夹 (content-title/index.md)").setValue(customType.creationMode).onChange(async (value) => {
           customType.creationMode = value;
           await this.plugin.saveSettings();
           this.updateCustomContentTypeIndexFileField(customType.id);
@@ -3157,28 +3157,28 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       const indexFileContainer = settingsContainer.createDiv({ cls: "custom-index-file-field" });
       indexFileContainer.classList.toggle("astro-composer-setting-container-visible", customType.creationMode === "folder");
       indexFileContainer.classList.toggle("astro-composer-setting-container-hidden", customType.creationMode !== "folder");
-      new import_obsidian9.Setting(indexFileContainer).setName("Index file name").setDesc("Name for index files in folder-based content (without .md extension). Defaults to 'index' if left blank.").addText(
+      new import_obsidian9.Setting(indexFileContainer).setName("索引文件名").setDesc("文件夹模式内容中索引文件的名称（不含 .md 扩展名）。留空默认为 'index'。").addText(
         (text) => text.setPlaceholder("Index").setValue(customType.indexFileName).onChange(async (value) => {
           customType.indexFileName = value;
           await this.plugin.saveSettings();
         })
       );
       const useMdxContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(useMdxContainer).setName("Use MDX instead of md").setDesc("Create files with .mdx extension instead of .md extension.").addToggle(
+      new import_obsidian9.Setting(useMdxContainer).setName("使用 MDX 替代 md").setDesc("创建 .mdx 扩展名文件而非 .md 扩展名文件。").addToggle(
         (toggle2) => toggle2.setValue(customType.useMdxExtension || false).onChange(async (value) => {
           customType.useMdxExtension = value;
           await this.plugin.saveSettings();
         })
       );
       const modifiedDateContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(modifiedDateContainer).setName("Modified date property").setDesc("The property field to update with the modified date for this content type. Leave blank to disable.").addText(
+      new import_obsidian9.Setting(modifiedDateContainer).setName("修改日期属性").setDesc("此内容类型更新修改日期时使用的属性字段。留空则禁用。").addText(
         (text) => text.setPlaceholder("Modified").setValue(customType.modifiedDateField || "").onChange(async (value) => {
           customType.modifiedDateField = value;
           await this.plugin.saveSettings();
         })
       );
       const templateContainer = settingsContainer.createDiv();
-      new import_obsidian9.Setting(templateContainer).setName("Properties template").addTextArea((text) => {
+      new import_obsidian9.Setting(templateContainer).setName("属性模板").addTextArea((text) => {
         text.setPlaceholder('---\ntitle: "{{title}}"\ndate: {{date}}\n---\n').setValue(customType.template).onChange(async (value) => {
           customType.template = value;
           await this.plugin.saveSettings();
@@ -3188,20 +3188,20 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       }).then((setting) => {
         setting.descEl.empty();
         const descDiv = setting.descEl.createEl("div");
-        descDiv.createEl("div", { text: "Template for new files of this content type." });
-        descDiv.createEl("div", { text: "Variables include {{title}}, {{date}}, and {{slug}}." });
-        descDiv.createEl("div", { text: "Do not wrap {{date}} in quotes as it represents a datetime value, not a string." });
+        descDiv.createEl("div", { text: "此内容类型新文件的模板。" });
+        descDiv.createEl("div", { text: "变量包括 {{title}}、{{date}} 和 {{slug}}。" });
+        descDiv.createEl("div", { text: "不要给 {{date}} 加引号，因为它表示日期时间值而非字符串。" });
       });
       const removeContainer = settingsContainer.createDiv();
       const removeSetting = new import_obsidian9.Setting(removeContainer).setName("").addButton((button) => {
-        button.setButtonText("Remove").setWarning().onClick(async () => {
+        button.setButtonText("移除").setWarning().onClick(async () => {
           const contentType = this.plugin.settings.contentTypes.find((ct) => ct.id === customType.id);
-          const typeName = (contentType == null ? void 0 : contentType.name) || "content type";
+          const typeName = (contentType == null ? void 0 : contentType.name) || "内容类型";
           const modal = new ConfirmModal(
             this.app,
-            `Are you sure you want to remove "${typeName}"? This action cannot be undone.`,
-            "Remove",
-            "Cancel"
+            `确定要移除"${typeName}"吗？此操作无法撤销。`,
+            "移除",
+            "取消"
           );
           const confirmed = await modal.waitForResult();
           if (confirmed) {
@@ -3218,7 +3218,7 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
     const addButtonContainer = this.customContentTypesContainer.createDiv({ cls: "astro-composer-add-button-container" });
     const addButton = addButtonContainer.createEl("button", {
       cls: "mod-cta",
-      text: "Add content type"
+      text: "添加内容类型"
     });
     addButton.addEventListener("click", () => {
       this.addCustomContentType();
@@ -3271,14 +3271,14 @@ var AstroComposerSettingTab = class extends import_obsidian9.PluginSettingTab {
       if (otherType.id === typeId || !otherType.enabled) continue;
       const otherFolder = (otherType.folder || "").trim();
       if (currentFolder === "" && otherFolder === "") {
-        conflictingTypes.push(otherType.name || "Unnamed");
+        conflictingTypes.push(otherType.name || "未命名");
       } else if (currentFolder === otherFolder && currentFolder !== "") {
-        conflictingTypes.push(otherType.name || "Unnamed");
+        conflictingTypes.push(otherType.name || "未命名");
       }
     }
     if (conflictingTypes.length > 0) {
       conflictWarningEl.removeClass("hidden");
-      conflictWarningEl.textContent = `Conflict: ${conflictingTypes.join(", ")} also use${conflictingTypes.length === 1 ? "s" : ""} this folder. More specific patterns will take priority.`;
+      conflictWarningEl.textContent = `冲突: ${conflictingTypes.join(", ")} 也使用了此文件夹。更具体的模式将优先。`;
     } else {
       conflictWarningEl.addClass("hidden");
     }
@@ -3552,16 +3552,16 @@ var MigrationModal = class extends import_obsidian10.Modal {
     const { contentEl } = this;
     contentEl.empty();
     contentEl.addClass("astro-composer-migration-modal");
-    contentEl.createEl("h2", { text: "Migration conflict detected" });
+    contentEl.createEl("h2", { text: "检测到迁移冲突" });
     contentEl.createEl("p", {
-      text: "You have existing content types with names that conflict with posts or pages. How would you like to proceed?"
+      text: "您现有的内容类型名称与 posts 或 pages 冲突。您想如何处理？"
     });
     const conflictList = contentEl.createEl("ul");
-    conflictList.createEl("li", { text: "Skip migration: keep your existing posts/pages settings (they will be ignored)" });
-    conflictList.createEl("li", { text: "Migrate with renamed types: create 'posts (migrated)' and 'pages (migrated)' content types" });
+    conflictList.createEl("li", { text: "跳过迁移: 保留现有的 posts/pages 设置（它们将被忽略）" });
+    conflictList.createEl("li", { text: "以重命名类型迁移: 创建 'posts (migrated)' 和 'pages (migrated)' 内容类型" });
     const buttonContainer = contentEl.createDiv({ cls: "modal-button-container" });
     const skipButton = buttonContainer.createEl("button", {
-      text: "Skip migration",
+      text: "跳过迁移",
       cls: "mod-cta"
     });
     skipButton.onclick = () => {
@@ -3569,7 +3569,7 @@ var MigrationModal = class extends import_obsidian10.Modal {
       this.close();
     };
     const migrateButton = buttonContainer.createEl("button", {
-      text: "Migrate with renamed types",
+      text: "以重命名类型迁移",
       cls: "mod-cta"
     });
     migrateButton.onclick = () => {
@@ -3640,12 +3640,12 @@ var MigrationService = class {
               ]);
               if (result.action === "skip") {
                 shouldMigrate = false;
-                new import_obsidian11.Notice("Migration skipped. Old posts/pages settings will be ignored.");
+                new import_obsidian11.Notice("已跳过迁移。旧的 posts/pages 设置将被忽略。");
               }
             } catch (error) {
               console.warn("Migration modal error:", error);
               shouldMigrate = false;
-              new import_obsidian11.Notice("Migration skipped due to error. You can migrate manually in settings.");
+              new import_obsidian11.Notice("由于错误已跳过迁移。您可以在设置中手动迁移。");
             }
             resolve();
           })();
@@ -3730,7 +3730,7 @@ var MigrationService = class {
     await this.plugin.saveSettings();
     await this.plugin.loadSettings();
     if (migratedTypes.length > 0) {
-      new import_obsidian11.Notice(`Migration completed: ${migratedTypes.length} content type(s) migrated.`);
+      new import_obsidian11.Notice(`迁移完成: ${migratedTypes.length} 个内容类型已迁移。`);
       window.setTimeout(() => {
         if (this.plugin.settingsTab instanceof AstroComposerSettingTab) {
           const settingsTab = this.plugin.settingsTab;
@@ -3822,8 +3822,8 @@ var CreateEventService = class {
         }
       }
       if (matchingTypes.length > 1) {
-        const typeNames = matchingTypes.map((ct) => ct.name || "Unnamed").join(", ");
-        new import_obsidian12.Notice(`Multiple content types (${typeNames}) match this file. Using most specific: ${matchingTypes[0].name || "Unnamed"}`);
+        const typeNames = matchingTypes.map((ct) => ct.name || "未命名").join(", ");
+        new import_obsidian12.Notice(`多个内容类型 (${typeNames}) 匹配此文件。使用最具体的: ${matchingTypes[0].name || "未命名"}`);
       }
       if (!matchedContentTypeId) {
         return;
@@ -4170,7 +4170,7 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
       this.setupRibbonContextMenuHandling();
     } catch (error) {
       console.error("[Astro Composer] Critical error during onload:", error);
-      new import_obsidian14.Notice("Astro Composer failed to load. Check console (Ctrl+Shift+I) for details.");
+      new import_obsidian14.Notice("Astro Composer 加载失败。请检查控制台 (Ctrl+Shift+I) 查看详情。");
       throw error;
     }
   }
@@ -4288,15 +4288,15 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
           const fullLink = this.headingLinkGenerator.generateLink(this.app, file, heading);
           const urlOnly = this.headingLinkGenerator.extractUrl(fullLink);
           menu.addItem((item) => {
-            item.setTitle("Copy heading link").setIcon("link-2").onClick(async () => {
+            item.setTitle("复制标题链接").setIcon("link-2").onClick(async () => {
               await navigator.clipboard.writeText(urlOnly);
-              new import_obsidian14.Notice("Heading link copied to clipboard");
+              new import_obsidian14.Notice("标题链接已复制到剪贴板");
             });
           });
           menu.addItem((item) => {
-            item.setTitle("Copy heading link with text").setIcon("heading").onClick(async () => {
+            item.setTitle("复制带文本的标题链接").setIcon("heading").onClick(async () => {
               await navigator.clipboard.writeText(fullLink);
-              new import_obsidian14.Notice("Heading link with text copied to clipboard");
+              new import_obsidian14.Notice("带文本的标题链接已复制到剪贴板");
             });
           });
         }
@@ -4323,9 +4323,9 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
         this.configRibbonIcon = null;
       }
       try {
-        const terminalIcons = activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="Open project terminal"]');
+        const terminalIcons = activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="打开项目终端"]');
         terminalIcons.forEach((icon) => icon.remove());
-        const configIcons = activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="Edit Astro config"]');
+        const configIcons = activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="编辑 Astro 配置"]');
         configIcons.forEach((icon) => icon.remove());
       } catch (e) {
       }
@@ -4348,14 +4348,14 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
       this.configRibbonIcon = null;
     }
     try {
-      activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="Open project terminal"]').forEach((el) => el.remove());
-      activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="Edit Astro config"]').forEach((el) => el.remove());
+      activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="打开项目终端"]').forEach((el) => el.remove());
+      activeDocument.querySelectorAll('.side-dock-ribbon-action[aria-label="编辑 Astro 配置"]').forEach((el) => el.remove());
     } catch (e) {
     }
     if (terminalShouldExist) {
-      this.terminalRibbonIcon = this.addRibbonIcon("terminal-square", "Open project terminal", () => {
+      this.terminalRibbonIcon = this.addRibbonIcon("terminal-square", "打开项目终端", () => {
         if (!this.settings.enableOpenTerminalCommand) {
-          new import_obsidian14.Notice("Open terminal command is disabled.");
+          new import_obsidian14.Notice("打开终端命令已禁用。");
           return;
         }
         openTerminalInProjectRoot(this.app, this.settings);
@@ -4363,9 +4363,9 @@ var AstroComposerPlugin = class extends import_obsidian14.Plugin {
       if (this.terminalRibbonIcon) this.terminalRibbonIcon.setAttribute("data-astro-composer-terminal-ribbon", "true");
     }
     if (configShouldExist) {
-      this.configRibbonIcon = this.addRibbonIcon("rocket", "Edit Astro config", async () => {
+      this.configRibbonIcon = this.addRibbonIcon("rocket", "编辑 Astro 配置", async () => {
         if (!this.settings.enableOpenConfigFileCommand) {
-          new import_obsidian14.Notice("Edit config file command is disabled.");
+          new import_obsidian14.Notice("编辑配置文件命令已禁用。");
           return;
         }
         await openConfigFile(this.app, this.settings);

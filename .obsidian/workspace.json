@@ -171,7 +171,7 @@
               "type": "git-view",
               "state": {},
               "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "源代码管理"
             }
           }
         ],
@@ -183,6 +183,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "astro-composer:打开项目终端": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -193,10 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d7c926123ef3eddc",
+  "active": "08edea3560621409",
   "lastOpenFiles": [
-    "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
+    "src/content/posts/blog/_123.md",
     "src/content/posts/blog/_安装claude-code的详细教程.md",
+    "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
     "Firefly/src/content/posts/blog",
     "Firefly/src/content/posts",
     "Firefly/src/content",
@@ -240,7 +242,6 @@
     "Firefly/src/content/posts/firefly.md",
     "Firefly/src/content/posts/video_bot.md",
     "Firefly/src/content/spec/guestbook.md",
-    "未命名.canvas",
-    "Firefly/src/content/posts/video.md"
+    "未命名.canvas"
   ]
 }
