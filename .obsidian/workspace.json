@@ -206,8 +206,9 @@
   },
   "active": "08edea3560621409",
   "lastOpenFiles": [
-    "src/content/posts/blog/_如何将本地代码首次推送到-git-hub.md",
+    "src/content/posts/blog/_利用one-kvm把矿渣玩客云变成硬件级ipkvm远控神器.md",
     "src/content/posts/blog/_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅.md",
+    "src/content/posts/blog/_如何将本地代码首次推送到-git-hub.md",
     "src/content/posts/blog/_安装claude-code的详细教程.md",
     "src/content/posts/blog/_123.md",
     "src/content/posts/blog/Rclone 挂载 WebDAV 到本地.md",
@@ -251,7 +252,6 @@
     "src/content/posts/blog/123.md",
     "src/content/posts/Untitled.md",
     "Firefly/src/content/spec/about.md",
-    "Firefly/src/content/posts/firefly.md",
     "未命名.canvas"
   ]
 }

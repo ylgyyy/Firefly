@@ -2,7 +2,7 @@
 title: 矿渣玩客云变废为宝：OpenWrt旁路由 + OpenClash，体验丝滑流畅
 published: 2026-06-11
 updated: 2026-06-11
-description: 果你家里也有一台吃灰的“矿渣”——**玩客云**，千万别急着把它卖掉或扔进垃圾桶
+description: 果你家里也有一台吃灰的“矿渣”——玩客云，千万别急着把它卖掉或扔进垃圾桶
 image: api
 tags:
   - 玩客云
