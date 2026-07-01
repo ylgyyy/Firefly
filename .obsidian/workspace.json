@@ -11,14 +11,10 @@
             "id": "1d69c2bb67fe2344",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/posts/blog/_简简单单测试一下.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "_简简单单测试一下"
+              "title": "新标签页"
             }
           }
         ]
@@ -194,10 +190,10 @@
       "bases:新建数据库": false
     }
   },
-  "active": "1d69c2bb67fe2344",
+  "active": "e916fb364af87653",
   "lastOpenFiles": [
-    "src/content/posts/blog/_1234.md",
     "src/content/posts/blog/_简简单单测试一下.md",
+    "src/content/posts/blog/_1234.md",
     "src/content/posts/blog/_测试文章.md",
     "src/content/posts/blog/_杨の小屋telegram频道正式启用.md",
     "src/content/posts/blog/_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅.md",
