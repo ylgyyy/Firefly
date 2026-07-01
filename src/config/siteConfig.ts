@@ -16,16 +16,10 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://blog.trrr.top",
 
 	// 站点描述
-	description:
-		"这是我的第一个个人博客网站。",
+	description: "这是我的第一个个人博客网站。",
 
 	// 站点关键词
-	keywords: [
-		"杨了个羊",
-		"博客",
-		"技术博客",
-		"静态博客",
-	],
+	keywords: ["杨了个羊", "博客", "技术博客", "静态博客"],
 
 	// 主题色
 	themeColor: {
