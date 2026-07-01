@@ -11,14 +11,15 @@
             "id": "c7def20f6a627363",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "src/content/posts/blog/_杨の小屋telegram频道正式启用.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": "HEAD",
+                "bRef": ""
               },
-              "icon": "lucide-file",
-              "title": "_杨の小屋telegram频道正式启用"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Index)"
             }
           }
         ]
@@ -196,6 +197,7 @@
   },
   "active": "c7def20f6a627363",
   "lastOpenFiles": [
+    "src/content/posts/blog/_测试文章.md",
     "src/content/posts/blog/_杨の小屋telegram频道正式启用.md",
     "src/content/posts/blog/_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅.md",
     "src/content/posts/blog/_利用one-kvm把矿渣玩客云变成硬件级ipkvm远控神器.md",
@@ -241,7 +243,6 @@
     "Firefly/src/content/posts/blog/_123.md",
     "Firefly/src/content/posts/blog/github.md",
     "src/content/posts/blog/123.md",
-    "src/content/posts/Untitled.md",
     "未命名.canvas"
   ]
 }
