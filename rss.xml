@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>杨了个羊博客</title><description>一个爱分享的博主</description><link>https://blog.trrr.top/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.10.3</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年7月1日 20:17:45</lastBuildDate><item><title>杨🐑の小屋Telegram频道正式启用！</title><link>https://blog.trrr.top/posts/blog/_%E6%9D%A8%E3%81%AE%E5%B0%8F%E5%B1%8Btelegram%E9%A2%91%E9%81%93%E6%AD%A3%E5%BC%8F%E5%90%AF%E7%94%A8/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E6%9D%A8%E3%81%AE%E5%B0%8F%E5%B1%8Btelegram%E9%A2%91%E9%81%93%E6%AD%A3%E5%BC%8F%E5%90%AF%E7%94%A8/</guid><description>同步更新到Telegram频道</description><pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;文章内容以后同步更新到频道！
+关注博主频道：&lt;a href=&quot;https://t.me/xiziccc&quot; target=&quot;_blank&quot;&gt;https://t.me/xiziccc&lt;/a&gt;
+加入群组和主播一起畅谈未来！&lt;/p&gt;</content:encoded></item><item><title>测试文章</title><link>https://blog.trrr.top/posts/blog/_%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</guid><description>这是文章的简短描述</description><pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;12345678&lt;/p&gt;</content:encoded></item><item><title>利用OneKVM！把矿渣玩客云变成硬件级IPKVM远控神器！</title><link>https://blog.trrr.top/posts/blog/_%E5%88%A9%E7%94%A8one-kvm%E6%8A%8A%E7%9F%BF%E6%B8%A3%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%8F%98%E6%88%90%E7%A1%AC%E4%BB%B6%E7%BA%A7ipkvm%E8%BF%9C%E6%8E%A7%E7%A5%9E%E5%99%A8/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E5%88%A9%E7%94%A8one-kvm%E6%8A%8A%E7%9F%BF%E6%B8%A3%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%8F%98%E6%88%90%E7%A1%AC%E4%BB%B6%E7%BA%A7ipkvm%E8%BF%9C%E6%8E%A7%E7%A5%9E%E5%99%A8/</guid><description>还在为远程管理无网设备、调试 BIOS 或重装系统而烦恼？传统的远程控制软件往往受限于操作系统和网络环境。今天，我们就部署一款硬件级的远程管理神器——OneKVM</description><pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;还在为远程管理无网设备、调试 BIOS 或重装系统而烦恼？传统的远程控制软件往往受限于操作系统和网络环境。今天，我们就部署一款硬件级的远程管理神器——&lt;strong&gt;OneKVM&lt;/strong&gt;。它通过&lt;strong&gt;视频采集卡+USB对拷&lt;/strong&gt;的纯硬件方式，实现了&lt;strong&gt;无视被控端系统、无需安装软件、甚至完全脱离网络&lt;/strong&gt;的极致远程控制。无论是服务器维护、设备调试还是系统安装，OneKVM 都能让你像坐在设备前一样直接操作。接下来，就让我们将这款强大的工具，部署到性价比极高的“矿渣”玩客云上。&lt;/p&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;准备工作&lt;/strong&gt; &lt;strong&gt;🛠️&lt;/strong&gt;&lt;a href=&quot;#准备工作-️&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;矿渣玩客云&lt;/strong&gt;一台（用于部署OneKVM主机）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OneKVM固件&lt;/strong&gt;（开源免费的远程管理工具）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;USB_Burning_Tool&lt;/strong&gt;（晶晨芯片烧录工具）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VC运行库合集&lt;/strong&gt;（确保烧录工具正常运行）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;USB对拷线&lt;/strong&gt;（用于刷机和连接被控端）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;USB视频采集卡&lt;/strong&gt;（采集被控端的HDMI视频画面）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一把镊子&lt;/strong&gt;（用于短接刷机触点）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一个拆机棒&lt;/strong&gt;（用于撬开玩客云外壳）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一把十字螺丝刀&lt;/strong&gt;（用于拆卸螺丝）&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第一步：下载 OneKVM 固件&lt;/strong&gt; &lt;strong&gt;📥&lt;/strong&gt;&lt;a href=&quot;#第一步下载-onekvm-固件-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;访问 OneKVM 的 GitHub 发布页：
+&lt;a href=&quot;https://github.com/mofeng-git/One-KVM/releases&quot; target=&quot;_blank&quot;&gt;https://github.com/mofeng-git/One-KVM/releases&lt;/a&gt;&lt;/p&gt;&lt;p&gt;在页面中找到 &lt;strong&gt;“image 251001”&lt;/strong&gt; 版本，下载 One-KVM_by-SilentWind_Onecloud_250930.burn.img.xz 文件。下载完成后，使用解压工具（如7-Zip）将其解压，得到 .img 格式的刷机固件。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第二步：下载并安装 USB_Burning_Tool&lt;/strong&gt; &lt;strong&gt;⚙️&lt;/strong&gt;&lt;a href=&quot;#第二步下载并安装-usb_burning_tool-️&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;访问官网下载烧录工具：
+&lt;a href=&quot;https://androidmtk.com/download-amlogic-usb-burning-tool&quot; target=&quot;_blank&quot;&gt;https://androidmtk.com/download-amlogic-usb-burning-tool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载 &lt;strong&gt;v2.2.0&lt;/strong&gt; 版本，解压并安装。&lt;/li&gt;
+&lt;li&gt;首次运行时，若出现 “&lt;strong&gt;找不到 mfc100.dll&lt;/strong&gt;” 等报错，请下载并安装 &lt;strong&gt;VC运行库合集&lt;/strong&gt;：
+下载链接：&lt;a href=&quot;https://wwbsy.lanzoue.com/iXABS3huoysh&quot; target=&quot;_blank&quot;&gt;https://wwbsy.lanzoue.com/iXABS3huoysh&lt;/a&gt;
+密码：8cdv&lt;/li&gt;
+&lt;li&gt;安装运行库时，一直点击“下一步”即可。安装完成后，再次打开 USB_Burning_Tool，此时应能正常启动。&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第三步：拆解玩客云&lt;/strong&gt; &lt;strong&gt;🔧&lt;/strong&gt;&lt;a href=&quot;#第三步拆解玩客云-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：若你的玩客云&lt;strong&gt;已刷过机&lt;/strong&gt;，则无需拆机短接。只需按住 &lt;strong&gt;Reset&lt;/strong&gt; 复位键，再插入电源即可连接刷机软件。若为&lt;strong&gt;未刷机&lt;/strong&gt;的原版系统，请按以下步骤操作。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;使用拆机棒撬开玩客云的&lt;strong&gt;第一层后盖&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;用十字螺丝刀卸下露出的 &lt;strong&gt;6颗螺丝&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;再用拆机棒撬开&lt;strong&gt;第二层后盖&lt;/strong&gt;，即可抽出主板。&lt;/li&gt;
+&lt;li&gt;玩客云主板主要有两种版本：&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;新版&lt;/strong&gt;：SD卡槽旁印有 &lt;strong&gt;“V1.3”&lt;/strong&gt; 字样。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;旧版&lt;/strong&gt;：SD卡槽旁无任何标识。&lt;/li&gt;
+&lt;li&gt;两个版本的&lt;strong&gt;刷机短接触点位置不同&lt;/strong&gt;，请参考下图确认你的主板版本并进行短接。&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第四步：刷入 OneKVM 固件&lt;/strong&gt; &lt;strong&gt;🔄&lt;/strong&gt;&lt;a href=&quot;#第四步刷入-onekvm-固件-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;将对拷线一端插入玩客云&lt;strong&gt;靠近HDMI接口的USB口&lt;/strong&gt;，另一端插入电脑。&lt;/li&gt;
+&lt;li&gt;用镊子&lt;strong&gt;短接主板上的刷机触点&lt;/strong&gt;（勿松手）。&lt;/li&gt;
+&lt;li&gt;此时 USB_Burning_Tool 应识别到设备（如“连接成功”提示）。&lt;strong&gt;识别成功后即可移开镊子&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;点击软件上的 &lt;strong&gt;“文件” → “导入烧录包”&lt;/strong&gt;，选择第一步解压得到的 .img 固件文件。&lt;/li&gt;
+&lt;li&gt;固件校验完成后，点击 &lt;strong&gt;“开始”&lt;/strong&gt; 按钮。&lt;/li&gt;
+&lt;li&gt;当听到电脑发出 &lt;strong&gt;USB设备连接的“叮咚”提示音&lt;/strong&gt;时，&lt;strong&gt;立即拔插一次&lt;/strong&gt;玩客云上的对拷线。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;若未及时拔插，工具可能报错，此时再拔插仍可继续刷机。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;等待刷机进度完成，提示“烧录成功”。关闭软件，将玩客云按原样组装回去。&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第五步：试机启动&lt;/strong&gt; &lt;strong&gt;✅&lt;/strong&gt;&lt;a href=&quot;#第五步试机启动-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将玩客云的HDMI连接到显示器 并接通电源。当代码跑完屏幕上显示出&lt;strong&gt;Onecloud画面&lt;/strong&gt;，则表示固件刷入成功，设备启动正常。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第六步：连接被控端设备&lt;/strong&gt; &lt;strong&gt;🔗&lt;/strong&gt;&lt;a href=&quot;#第六步连接被控端设备-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;拔掉连接显示器的HDMI线。&lt;/li&gt;
+&lt;li&gt;为玩客云插入&lt;strong&gt;网线&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在玩客云&lt;strong&gt;网口一侧的USB口&lt;/strong&gt;上插入 &lt;strong&gt;USB视频采集卡&lt;/strong&gt;，接入HDMI视频线。&lt;/li&gt;
+&lt;li&gt;在玩客云&lt;strong&gt;靠近HDMI接口的USB口&lt;/strong&gt;上插入 &lt;strong&gt;USB对拷线&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;将HDMI视频线的另一端接入被控设备HDMI输出口，USB对拷线的另一端接入被控设备的任意USB口。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;至此，硬件连接完成。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第七步：OneKVM 初体验&lt;/strong&gt; &lt;strong&gt;🖥️&lt;/strong&gt;&lt;a href=&quot;#第七步onekvm-初体验-️&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;进入路由器后台的 &lt;strong&gt;DHCP客户端列表&lt;/strong&gt;，查找主机名为 &lt;strong&gt;“onecloud”&lt;/strong&gt; 的设备，并记录其IP地址。&lt;/li&gt;
+&lt;li&gt;在浏览器中输入该IP地址，打开 OneKVM Web管理界面。&lt;/li&gt;
+&lt;li&gt;使用默认账号密码登录（均为 admin）。&lt;/li&gt;
+&lt;li&gt;登录后，点击 &lt;strong&gt;“KVM”&lt;/strong&gt; 选项，即可看到被控设备的实时画面。&lt;/li&gt;
+&lt;li&gt;尝试重启被控设备，并按下进入BIOS的快捷键，这时就可以&lt;strong&gt;远程进入并操作被控端的BIOS了&lt;/strong&gt;，体验硬件级控制的魅力。&lt;/li&gt;
+&lt;li&gt;OneKVM 还支持电源管理、网络唤醒、快捷键发送、挂载ISO镜像等，甚至可以用PE给被控端装个系统。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;更多功能可查阅官方文档：
+&lt;a href=&quot;https://docs.one-kvm.cn/python/&quot; target=&quot;_blank&quot;&gt;https://docs.one-kvm.cn/python/&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第八步：修改 OneKVM 账号密码&lt;/strong&gt; &lt;strong&gt;🔐&lt;/strong&gt;&lt;a href=&quot;#第八步修改-onekvm-账号密码-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;为安全起见，建议修改默认凭证。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;退出当前登录，回到登录页面。&lt;/li&gt;
+&lt;li&gt;使用 admin 账户登录，点击 &lt;strong&gt;“Terminal”&lt;/strong&gt; 进入命令行界面。&lt;/li&gt;
+&lt;li&gt;输入以下命令切换至root账户：&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;su root&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;提示输入密码时，输入默认密码：1234（输入时无显示）。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;为root账户设置新密码：&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;passwd&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;按提示输入并确认新密码。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;查看当前用户列表：&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;kvmd-htpasswd list&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;添加一个新用户（例如 ylgyyy）：&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;kvmd-htpasswd add 你的用户名&lt;/p&gt;&lt;p&gt;设置该用户的密码。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;再次查看用户列表，确认新用户已添加。&lt;/li&gt;
+&lt;li&gt;删除默认的 admin 用户：&lt;/li&gt;
+&lt;/ol&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;kvmd-htpasswd del admin&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;退出并使用新创建的用户登录 OneKVM，验证是否成功。&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;第九步：配置内网穿透（实现公网访问）&lt;/strong&gt; &lt;strong&gt;🌐&lt;/strong&gt;&lt;a href=&quot;#第九步配置内网穿透实现公网访问-&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;OneKVM 作者提供了免费的穿透服务。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;登录 OneKVM Web界面，点击 &lt;strong&gt;“gostc”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;新增一个客户端，自定义名称。&lt;/li&gt;
+&lt;li&gt;在浏览器中打开穿透服务平台：&lt;a href=&quot;https://gostc.mofeng.run/&quot; target=&quot;_blank&quot;&gt;https://gostc.mofeng.run&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;注册并登录账号。&lt;/li&gt;
+&lt;li&gt;点击左侧 &lt;strong&gt;“客户端”&lt;/strong&gt;，创建一个与OneKVM同名的客户端，保存后复制生成的&lt;strong&gt;密钥&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;回到 OneKVM 的 gostc 设置页面，粘贴密钥。&lt;/li&gt;
+&lt;li&gt;在“服务器”栏填写：gostc.mofeng.run&lt;/li&gt;
+&lt;li&gt;开启 &lt;strong&gt;“自启动”&lt;/strong&gt;，保存并&lt;strong&gt;启动客户端服务&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;返回穿透平台页面，刷新客户端状态，这时客户端就已经 &lt;strong&gt;“在线”了&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在平台完成 &lt;strong&gt;邮箱绑定&lt;/strong&gt; 与 &lt;strong&gt;实名认证&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;“****隧道管理” → “端口转发”&lt;/strong&gt;，新增一个隧道。&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;套餐选择：&lt;strong&gt;Oen KVM Web专用&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;内网配置：填写内网 OneKVM 的 &lt;strong&gt;IP****地址&lt;/strong&gt; 与端口 443&lt;/li&gt;
+&lt;li&gt;远程端口：建议留空（自动分配）&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;保存后，复制生成的 &lt;strong&gt;公网访问地址&lt;/strong&gt;。 切换至外部网络，在浏览器中输入 https:// + 公网地址，即可远程访问你的 OneKVM 了！&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;结语&lt;/strong&gt;&lt;a href=&quot;#结语&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;至此，你已经成功将玩客云打造成了一台功能强大的硬件级远程管理设备。无论被控设备是何种状态，OneKVM 都能让你从容应对。&lt;/p&gt;&lt;/section&gt;</content:encoded></item><item><title>矿渣玩客云变废为宝：OpenWrt旁路由 + OpenClash，体验丝滑流畅</title><link>https://blog.trrr.top/posts/blog/_%E7%9F%BF%E6%B8%A3%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%8F%98%E5%BA%9F%E4%B8%BA%E5%AE%9D-open-wrt%E6%97%81%E8%B7%AF%E7%94%B1-open-clash%E4%BD%93%E9%AA%8C%E4%B8%9D%E6%BB%91%E6%B5%81%E7%95%85/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E7%9F%BF%E6%B8%A3%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%8F%98%E5%BA%9F%E4%B8%BA%E5%AE%9D-open-wrt%E6%97%81%E8%B7%AF%E7%94%B1-open-clash%E4%BD%93%E9%AA%8C%E4%B8%9D%E6%BB%91%E6%B5%81%E7%95%85/</guid><description>果你家里也有一台吃灰的“矿渣”——玩客云，千万别急着把它卖掉或扔进垃圾桶</description><pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h2&gt;&lt;strong&gt;🚀&lt;/strong&gt; &lt;strong&gt;前言&lt;/strong&gt;&lt;a href=&quot;#-前言&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;如果你家里也有一台吃灰的“矿渣”——&lt;strong&gt;玩客云&lt;/strong&gt;，千万别急着把它卖掉或扔进垃圾桶！💡
+只要花上十几分钟，它就能摇身一变，成为你家庭网络中&lt;strong&gt;又快又省&lt;/strong&gt;的“旁路由”。不仅能实现全屋网络去广告，还能轻松搞定各种复杂的网络需求。最关键的是，它的功耗仅有几瓦，24小时开机也完全不心疼电费！⚡&lt;/p&gt;&lt;p&gt;俗话说，“工欲善其事，必先利其器”。在开始这场“变废为宝”的旅程前，让我们先准备好必要的装备。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;🛠️ 准备工作：工欲善其事&lt;/strong&gt;&lt;a href=&quot;#️-准备工作工欲善其事&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在开搞之前，请确保你手边有以下物品：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;序号&lt;/th&gt;&lt;th&gt;物品/软件&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;玩客云&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;闲置设备即可 (V1.0 或 V1.3 版本)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;双公头 USB 线&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;两头均为 USB-A 接口，刷机数据传输必备 🔌&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;镊子 / 回形针&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;用于短接主板触点进入刷机模式 🔧&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;网线&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;连接玩客云与主路由器 🌐&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;5️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;USB Burning Tool&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;电脑端烧录工具 (Amlogic 官方)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;OpenWrt 固件&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;推荐 &lt;code&gt;shiyu1314&lt;/code&gt; 大神版本，简洁稳定 💾&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;7️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;XTerminal&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;SSH 连接工具，用于修改配置和输入命令 💻&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;8️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;OpenClash 插件&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;核心代理插件文件 (&lt;code&gt;.apk&lt;/code&gt;)，需手动上传 🧩&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9️⃣&lt;/td&gt;&lt;td&gt;&lt;strong&gt;OpenClash 内核&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;推荐 &lt;code&gt;Clash Meta&lt;/code&gt; 内核，需赋予执行权限 ⚙️&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;OpenWrt玩客云固件下载：&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/shiyu1314/openwrt-onecloud/releases&quot; target=&quot;_blank&quot;&gt;https://github.com/shiyu1314/openwrt-onecloud/releases&lt;/a&gt;&lt;/p&gt;&lt;p&gt;OpenClash插件下载：&lt;/p&gt;&lt;p&gt;（国际）：&lt;a href=&quot;https://github.com/vernesong/OpenClash&quot; target=&quot;_blank&quot;&gt;https://github.com/vernesong/OpenClash&lt;/a&gt;&lt;/p&gt;&lt;p&gt;（国内）：&lt;a href=&quot;https://wwbsy.lanzoue.com/iEHZb3j8rona&quot; target=&quot;_blank&quot;&gt;https://wwbsy.lanzoue.com/iEHZb3j8rona&lt;/a&gt; 密码:2bqj&lt;/p&gt;&lt;p&gt;OpenClash内核下载：&lt;/p&gt;&lt;p&gt;[&lt;a href=&quot;https://wwbsy.lanzoue.com/i6iyy3j8safe&quot; target=&quot;_blank&quot;&gt;https://wwbsy.lanzoue.com/i6iyy3j8safe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;](&lt;a href=&quot;https://wwbsy.lanzoue.com/i6iyy3j8safe)%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD%EF%BC%9A&quot; target=&quot;_blank&quot;&gt;https://wwbsy.lanzoue.com/i6iyy3j8safe)烧录工具下载：&lt;/a&gt;
+[&lt;a href=&quot;https://androiddatahost.com/c4vk5&quot; target=&quot;_blank&quot;&gt;https://androiddatahost.com/c4vk5&lt;/a&gt;&lt;/p&gt;&lt;p&gt;](&lt;a href=&quot;https://androiddatahost.com/c4vk5)XterminalSSH%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD%EF%BC%9A&quot; target=&quot;_blank&quot;&gt;https://androiddatahost.com/c4vk5)XterminalSSH工具下载：&lt;/a&gt;
+&lt;a href=&quot;https://www.terminal.icu/&quot; target=&quot;_blank&quot;&gt;https://www.terminal.icu&lt;/a&gt;&lt;/p&gt;&lt;p&gt;玩客云openwrt安装包：&lt;a href=&quot;https://box.trrr.top/#/?code=4PJUP&quot; target=&quot;_blank&quot;&gt;https://box.trrr.top/#/?code=4PJUP&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;🔓 第一步：玩客云拆机与版本识别&lt;/strong&gt;&lt;a href=&quot;#-第一步玩客云拆机与版本识别&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;玩客云的外壳采用&lt;strong&gt;卡扣 + 螺丝&lt;/strong&gt;的设计，拆解需要一点耐心。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;撬开后盖：从 SD 卡槽处小心抠开背后的贴片。如果是第一次拆机，建议用吹风机稍微加热，软化胶水。&lt;/li&gt;
+&lt;li&gt;卸下螺丝：揭开贴片后，你会看到藏在里面的 6 颗螺丝，全部卸下。&lt;/li&gt;
+&lt;li&gt;取出主板：取下塑料挡片，捏住主板边缘左右轻微晃动，慢慢向外拉出即可。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;🧐 如何区分版本？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;玩客云主要有 &lt;strong&gt;V1.0&lt;/strong&gt; 和 &lt;strong&gt;V1.3&lt;/strong&gt; 两个版本，它们的&lt;strong&gt;短接触点位置不同&lt;/strong&gt;，刷机前务必确认：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;V1.3：通常在 SD 卡槽附近印有 “V1.3” 字样。&lt;/li&gt;
+&lt;li&gt;V1.0：如果没有标注，大概率是 V1.0。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;💡 &lt;strong&gt;提示&lt;/strong&gt;：请在网上搜索“玩客云 V1.0/V1.3 短接图”，对照图片找到对应的金属触点位置。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;💻 第二步：刷入 OpenWrt 固件&lt;/strong&gt;&lt;a href=&quot;#-第二步刷入-openwrt-固件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是最关键的一步，请仔细操作：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;连接电脑：将主板靠近 HDMI 接口的 USB 口插入双公头 USB 线，另一端连接电脑。&lt;/li&gt;
+&lt;li&gt;短接通电：&lt;/li&gt;
+&lt;/ol&gt;&lt;ul&gt;
+&lt;li&gt;用镊子短接主板上的刷机触点。&lt;/li&gt;
+&lt;li&gt;保持短接状态，插入电源适配器。&lt;/li&gt;
+&lt;li&gt;当电脑端的 USB Burning Tool 软件识别到设备（显示“发现新硬件”或类似提示）时，松开镊子。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;导入固件：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;点击软件左上角 文件 -&amp;gt; 导入烧录包，选择下载好的 OpenWrt 固件。&lt;/li&gt;
+&lt;li&gt;在右侧选项栏勾选 擦除所有 (Erase All)。&lt;/li&gt;
+&lt;li&gt;点击 开始 按钮。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;等待完成：进度条走完后变为绿色，并显示 “烧录成功”。 收尾：点击停止，拔掉 USB 线和电源，将玩客云重新组装好。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;⚙️ 第三步：修改 IP 地址并网&lt;/strong&gt;&lt;a href=&quot;#️-第三步修改-ip-地址并网&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;由于 OpenWrt 默认 IP (192.168.2.2) 可能与你家主路由不在同一网段，我们需要先修改它。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;1. 临时直连修改&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;将玩客云通电，用网线直接连接电脑和玩客云。&lt;/li&gt;
+&lt;li&gt;使用 SSH 工具（如 XTerminal、Putty）连接：
+&lt;ul&gt;
+&lt;li&gt;IP: 192.168.2.2&lt;/li&gt;
+&lt;li&gt;用户名: root&lt;/li&gt;
+&lt;li&gt;密码: root (默认)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;2. 编辑网络配置&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;在命令行中输入以下命令编辑配置文件：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;vi /etc/config/network&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;按 i 键进入编辑模式。&lt;/li&gt;
+&lt;li&gt;找到 option ipaddr ‘192.168.2.2’ 这一行。&lt;/li&gt;
+&lt;li&gt;将其修改为你主路由同网段的空闲 IP，例如：&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;option ipaddr ‘10.10.10.249’&lt;/p&gt;&lt;p&gt;&lt;em&gt;(假设你的主路由是 10.10.10.253)&lt;/em&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;按 Esc 退出编辑，输入  保存并退出。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;3. 重启并测试&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;reboot&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;重启后，使用新 IP (10.10.10.249) 重新 SSH 连接。如果成功，拔出连接电脑的网线，将玩客云通过网线连接到&lt;strong&gt;主路由的 LAN 口&lt;/strong&gt;。&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;🌐 第四步：配置旁路由模式&lt;/strong&gt;&lt;a href=&quot;#-第四步配置旁路由模式&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;打开浏览器访问 &lt;a href=&quot;http://192.168.10.254%EF%BC%8C%E7%99%BB%E5%BD%95&quot; target=&quot;_blank&quot;&gt;http://192.168.10.254，登录&lt;/a&gt; OpenWrt 后台（账号密码均为 root）。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;1. 设置 LAN 口网关&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;进入 网络 -&amp;gt; 接口 -&amp;gt; LAN -&amp;gt; 编辑。&lt;/li&gt;
+&lt;li&gt;IPv4 网关：填写主路由 IP（如 10.10.10.253）。&lt;/li&gt;
+&lt;li&gt;DNS 服务器：填写 114.114.114.114 或运营商 DNS。&lt;/li&gt;
+&lt;li&gt;点击 保存 &amp;amp; 应用。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;2. 关闭旁路由 DHCP&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;仍在 LAN 口编辑页面，切换到 DHCP 服务器 标签页。&lt;/li&gt;
+&lt;li&gt;勾选 忽略此接口。&lt;/li&gt;
+&lt;li&gt;取消勾选 动态 DHCP。&lt;/li&gt;
+&lt;li&gt;在 IPv4 设置 中，将 DHCPv4 服务器 选为 已禁用。&lt;/li&gt;
+&lt;li&gt;在 IPv6 设置 中，将 RA 服务 和 DHCPv6 服务 均选为 已禁用。&lt;/li&gt;
+&lt;li&gt;点击 保存 &amp;amp; 应用。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;3. 主路由设置（关键一步）&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;登录你的主路由器后台。&lt;/li&gt;
+&lt;li&gt;找到 DHCP 服务器 设置。&lt;/li&gt;
+&lt;li&gt;将 默认网关 (或路由器地址) 填写为旁路由的 IP：192.168.10.254。&lt;/li&gt;
+&lt;li&gt;保存设置。&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;✅ &lt;strong&gt;验证&lt;/strong&gt;：回到 OpenWrt 后台，进入 网络 -&amp;gt; 网络诊断，Ping openwrt.org，若能通说明网络配置成功！&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;&lt;strong&gt;🚀 第五步：安装 OpenClash 实现科学加速&lt;/strong&gt;&lt;a href=&quot;#-第五步安装-openclash-实现科学加速&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;为了让网络更强大，我们安装 OpenClash 插件。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;1. 更新源并安装依赖&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;通过 SSH 连接旁路由，执行以下命令：&lt;/p&gt;&lt;p&gt;&lt;em&gt;# 更新软件源&lt;/em&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;apk update&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;# 安装 OpenClash 依赖&lt;/em&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;apk add bash dnsmasq-full curl ca-bundle ip-full ruby ruby-yaml kmod-tun kmod-inet-diag unzip kmod-nft-tproxy luci-compat luci luci-base&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. 上传并安装插件&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;将提前下载好的 openclash.apk 文件上传到玩客云的 /tmp 目录（可使用 SFTP 工具）。&lt;/li&gt;
+&lt;li&gt;执行安装命令：&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;apk add -q --force-overwrite --clean-protected --allow-untrusted /tmp/openclash.apk&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;3. 上传内核&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;创建内核目录：&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;mkdir -p /etc/openclash/core&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;将下载好的 clash_meta 内核文件上传至 /etc/openclash/core 目录。&lt;/li&gt;
+&lt;li&gt;赋予执行权限（必须执行）：&lt;/li&gt;
+&lt;/ul&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;chmod 755 /etc/openclash/core/clash_meta&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;4. 启动与配置&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;退出并重新登录 OpenWrt 后台。&lt;/li&gt;
+&lt;li&gt;点击顶部菜单 服务 -&amp;gt; OpenClash。&lt;/li&gt;
+&lt;li&gt;查看 运行状态，若显示客户端和内核版本号，说明安装成功！🎉&lt;/li&gt;
+&lt;li&gt;进入 配置文件管理，导入你的订阅链接。&lt;/li&gt;
+&lt;li&gt;点击 启动 按钮。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;一切配置完成后，你的家庭网络将迎来质的飞跃。&lt;/p&gt;&lt;/section&gt;</content:encoded></item><item><title>如何将本地代码首次推送到 GitHub</title><link>https://blog.trrr.top/posts/blog/_%E5%A6%82%E4%BD%95%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E5%88%B0-git-hub/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E5%A6%82%E4%BD%95%E5%B0%86%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E9%A6%96%E6%AC%A1%E6%8E%A8%E9%80%81%E5%88%B0-git-hub/</guid><description>如何把本地代码推送到github</description><pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;注意：GitHub 目前终端推送不再支持登录密码，必须使用 &lt;strong&gt;个人访问令牌 (PAT)&lt;/strong&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;section&gt;&lt;h2&gt;步骤一：创建 GitHub 空仓库&lt;a href=&quot;#步骤一创建-github-空仓库&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;登录 GitHub，点击右上角 &lt;strong&gt;&lt;code&gt;+&lt;/code&gt;&lt;/strong&gt; → &lt;strong&gt;New repository&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;填写仓库名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择 &lt;strong&gt;Public&lt;/strong&gt; 或 &lt;strong&gt;Private&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不要勾选&lt;/strong&gt; &lt;code&gt;Add a README file&lt;/code&gt; 和 &lt;code&gt;Add .gitignore&lt;/code&gt;，保持仓库为空。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击 &lt;strong&gt;Create repository&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;复制页面提供的 &lt;strong&gt;HTTPS 地址&lt;/strong&gt;：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;https://github.com/你的用户名/你的仓库名.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;步骤二：生成个人访问令牌 (Token)&lt;a href=&quot;#步骤二生成个人访问令牌-token&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Token 是你在终端推送代码时的”通行密码”。&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;点击 GitHub 右上角头像 → &lt;strong&gt;Settings&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;左侧菜单滑到底部 → &lt;strong&gt;Developer settings&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal access tokens&lt;/strong&gt; → &lt;strong&gt;Tokens (classic)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Generate new token (classic)&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;填写 Note（如 &lt;code&gt;VPS Push&lt;/code&gt;），选择 Expiration。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;勾选 &lt;code&gt;repo&lt;/code&gt; 权限&lt;/strong&gt;（完整控制私有仓库）。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Generate token&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;立即复制 Token&lt;/strong&gt;（以 &lt;code&gt;ghp_&lt;/code&gt; 开头），刷新页面后将永久隐藏，请妥善保存。&lt;/li&gt;
+&lt;/ol&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;步骤三：初始化 Git 仓库&lt;a href=&quot;#步骤三初始化-git-仓库&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 进入项目目录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/你的/项目/路径&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 配置 Git 身份（首次使用）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--global&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;user.name&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;你的GitHub用户名&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--global&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;user.email&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;你的GitHub注册邮箱&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 初始化仓库&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;init&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;步骤四：添加并提交代码&lt;a href=&quot;#步骤四添加并提交代码&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 将所有文件加入暂存区（自动应用 .gitignore 规则）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;add&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 提交并填写备注&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;commit&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-m&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;Initial commit&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;步骤五：推送到 GitHub&lt;a href=&quot;#步骤五推送到-github&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 将主分支命名为 main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;branch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-M&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 关联远程仓库（替换为步骤一复制的地址）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;remote&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;add&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;origin&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://github.com/你的用户名/你的仓库名.git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 推送&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;push&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-u&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;origin&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;main&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;git push&lt;/code&gt; 后，终端会依次提示输入：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;提示&lt;/th&gt;&lt;th&gt;输入内容&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Username for &apos;https://github.com&apos;:&lt;/code&gt;&lt;/td&gt;&lt;td&gt;你的 GitHub 用户名&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Password for &apos;https://...@github.com&apos;:&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;粘贴 &lt;code&gt;ghp_&lt;/code&gt; 开头的 Token&lt;/strong&gt;（粘贴时无任何显示，按回车即可）&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;看到 &lt;code&gt;Branch &apos;main&apos; set up to track remote branch &apos;main&apos; from &apos;origin&apos;&lt;/code&gt; 即表示上传成功。&lt;/p&gt;&lt;/section&gt;</content:encoded></item><item><title>安装claude code的详细教程</title><link>https://blog.trrr.top/posts/blog/_%E5%AE%89%E8%A3%85claude-code%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/_%E5%AE%89%E8%A3%85claude-code%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid><description>安装claude code 的详细方法，手把手教你安装</description><pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;Claude Code 是 Anthropic 推出的终端 AI 编程助手，支持 Windows / macOS / Linux。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;section&gt;&lt;h2&gt;1. 前置环境&lt;a href=&quot;#1-前置环境&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;依赖&lt;/th&gt;&lt;th&gt;最低版本&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Node.js&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;≥ 18.0.0&lt;/td&gt;&lt;td&gt;推荐使用最新的 LTS 版本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;≥ 2.23&lt;/td&gt;&lt;td&gt;用于版本控制和自动上下文检测&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Git Bash&lt;/strong&gt; (Windows)&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;Windows 下必须使用 Git Bash 或 WSL，不支持 CMD/PowerShell&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;section&gt;&lt;h3&gt;1.1 安装 Node.js&lt;a href=&quot;#11-安装-nodejs&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 方式一：官网下载安装包&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# https://nodejs.org/zh-cn → 下载 LTS 版本 .msi 安装包，双击安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 方式二：使用 winget（Windows 11 自带）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;winget&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;OpenJS.NodeJS.LTS&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;macOS:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 方式一：官网下载 .pkg 安装包&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 方式二：使用 Homebrew&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;brew&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;node&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# Debian / Ubuntu&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;curl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-fsSL&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://deb.nodesource.com/setup_lts.x&lt;/span&gt;&lt;span&gt; | &lt;/span&gt;&lt;span&gt;sudo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-E&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;bash&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;sudo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apt-get&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-y&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;nodejs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 也可以使用 nvm 管理多版本&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;curl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-o-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh&lt;/span&gt;&lt;span&gt; | &lt;/span&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nvm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--lts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nvm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;use&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--lts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;验证安装：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;node&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 应输出 ≥ v18.0.0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;# 应输出 ≥ v9.0.0&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;1.2 安装 Git&lt;a href=&quot;#12-安装-git&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 下载 Git for Windows：https://git-scm.com/download/win&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装时选择 &quot;Use Git from Git Bash only&quot; 或 &quot;Use Git and optional Unix tools from the Command Prompt&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;winget&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Git.Git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;macOS:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;brew&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 或安装 Xcode Command Line Tools（自带 git）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;xcode-select&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--install&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# Debian / Ubuntu&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;sudo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apt&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# RHEL / Fedora&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;sudo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;dnf&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;验证安装：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 应输出 ≥ git version 2.23&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;2. 安装 Claude Code&lt;a href=&quot;#2-安装-claude-code&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;方式一：npm 全局安装（推荐，全平台通用）&lt;a href=&quot;#方式一npm-全局安装推荐全平台通用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方式二：Windows 独立安装包&lt;a href=&quot;#方式二windows-独立安装包&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;从 &lt;a href=&quot;https://docs.anthropic.com/en/docs/claude-code/overview&quot; target=&quot;_blank&quot;&gt;Claude Code 官方页面&lt;/a&gt; 下载 &lt;code&gt;.exe&lt;/code&gt; 安装包，双击运行。&lt;/p&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方式三：使用 winget（Windows）&lt;a href=&quot;#方式三使用-wingetwindows&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;winget&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;Anthropic.ClaudeCode&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;方式四：使用 Homebrew（macOS）&lt;a href=&quot;#方式四使用-homebrewmacos&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;brew&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;验证安装：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;3. 登录认证&lt;a href=&quot;#3-登录认证&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;首次运行 &lt;code&gt;claude&lt;/code&gt; 时会自动弹出浏览器完成 OAuth 登录授权：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;之后无需重复登录。如需重新登录：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;login&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;logout&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 登出&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;如果你的环境没有浏览器（如服务器、CI），才需要手动设置 &lt;code&gt;ANTHROPIC_API_KEY&lt;/code&gt; 环境变量。日常使用 OAuth 登录就够了。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;4. 安装 cc-switch（可选但推荐）&lt;a href=&quot;#4-安装-cc-switch可选但推荐&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;cc-switch&lt;/code&gt; 是一个便捷的模型切换工具，用于快速切换 Claude Code 使用的 AI 模型。&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;cc-switch&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装后 claude 命令会自动集成，直接使用即可&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;section&gt;&lt;h3&gt;常用切换命令&lt;a href=&quot;#常用切换命令&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cc-switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;opus&lt;/span&gt;&lt;span&gt;     &lt;/span&gt;&lt;span&gt;# 切换到 Claude Opus（最强，适合复杂任务）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cc-switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;sonnet&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 切换到 Claude Sonnet（均衡，默认模型）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cc-switch&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;haiku&lt;/span&gt;&lt;span&gt;    &lt;/span&gt;&lt;span&gt;# 切换到 Claude Haiku（最快，适合简单任务）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt; 在 Claude Code 会话中输入 &lt;code&gt;/model&lt;/code&gt; 也可以查看和切换模型。&lt;/p&gt;&lt;/blockquote&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;5. 首次运行&lt;a href=&quot;#5-首次运行&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 进入你的项目目录&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/path/to/your/project&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 启动 Claude Code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;首次运行会引导你完成：&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;OAuth 登录或 API Key 验证&lt;/li&gt;
+&lt;li&gt;选择默认模型&lt;/li&gt;
+&lt;li&gt;是否允许 Claude Code 读取文件 / 执行命令等权限设置&lt;/li&gt;
+&lt;/ul&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;6. 更新 Claude Code&lt;a href=&quot;#6-更新-claude-code&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# npm 安装方式&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;update&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 查看当前版本&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;7. 常见问题&lt;a href=&quot;#7-常见问题&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;Q: Windows 下报错 “command not found”&lt;a href=&quot;#q-windows-下报错-command-not-found&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; 未使用 Git Bash 或 WSL 终端。&lt;br /&gt;
+&lt;strong&gt;解决：&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 &lt;strong&gt;Git Bash&lt;/strong&gt;（右键桌面 → Git Bash Here）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;确保 npm 全局路径在 PATH 中：&lt;/p&gt;
+&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;get&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;prefix&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 输出类似 /c/Users/你的用户名/AppData/Roaming/npm&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 确保该路径在 PATH 环境变量中&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;Q: 提示 “API key is invalid”&lt;a href=&quot;#q-提示-api-key-is-invalid&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; Key 格式错误或未正确设置环境变量。&lt;br /&gt;
+&lt;strong&gt;解决：&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 检查环境变量是否生效&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;echo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;$ANTHROPIC_API_KEY&lt;/span&gt;&lt;span&gt;   &lt;/span&gt;&lt;span&gt;# 应输出你的 key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 检查 key 前缀是否正确，正确格式：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# sk-ant-api03-xxxxxxxxxxxxxxxxxxxx&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;Q: 提示 Node.js 版本过低&lt;a href=&quot;#q-提示-nodejs-版本过低&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决：&lt;/strong&gt; 升级到 Node.js 18+：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;node&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-v&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;# 查看当前版本&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 使用 nvm 升级&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nvm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;22&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nvm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;use&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;22&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;Q: npm 全局安装权限错误 (Linux/macOS)&lt;a href=&quot;#q-npm-全局安装权限错误-linuxmacos&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决：&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 推荐使用 nvm，避免 sudo 权限问题&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 或修改 npm 全局目录：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;mkdir&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;~/.npm-global&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;set&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;prefix&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;~/.npm-global&apos;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;echo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;export PATH=~/.npm-global/bin:$PATH&apos;&lt;/span&gt;&lt;span&gt; &amp;gt;&amp;gt; &lt;/span&gt;&lt;span&gt;~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;Q: 国内网络访问慢 / 无法连接&lt;a href=&quot;#q-国内网络访问慢--无法连接&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决：&lt;/strong&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# npm 设置镜像&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;set&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;registry&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://registry.npmmirror.com&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 安装时指定镜像&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--registry=https://registry.npmmirror.com&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;hr /&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;8. 常用命令速查&lt;a href=&quot;#8-常用命令速查&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;命令&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude&lt;/code&gt;&lt;/td&gt;&lt;td&gt;启动 Claude Code&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude --version&lt;/code&gt;&lt;/td&gt;&lt;td&gt;查看版本&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude login&lt;/code&gt;&lt;/td&gt;&lt;td&gt;重新登录&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude logout&lt;/code&gt;&lt;/td&gt;&lt;td&gt;登出&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude config&lt;/code&gt;&lt;/td&gt;&lt;td&gt;修改配置&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;claude update&lt;/code&gt;&lt;/td&gt;&lt;td&gt;检查并安装更新&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;/help&lt;/code&gt;&lt;/td&gt;&lt;td&gt;会话中查看帮助&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;/model&lt;/code&gt;&lt;/td&gt;&lt;td&gt;会话中切换模型&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;/cost&lt;/code&gt;&lt;/td&gt;&lt;td&gt;查看当前会话费用&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;/clear&lt;/code&gt;&lt;/td&gt;&lt;td&gt;清除对话历史&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Ctrl+C&lt;/code&gt;&lt;/td&gt;&lt;td&gt;退出当前操作&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;Ctrl+D&lt;/code&gt; 或 &lt;code&gt;/exit&lt;/code&gt;&lt;/td&gt;&lt;td&gt;退出 Claude Code&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;hr /&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;9. 完整安装脚本（一键参考）&lt;a href=&quot;#9-完整安装脚本一键参考&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# ===== 适用于 macOS / Linux =====&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 1. 安装 Node.js（如已安装可跳过）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;curl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-o-&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh&lt;/span&gt;&lt;span&gt; | &lt;/span&gt;&lt;span&gt;bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nvm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--lts&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 2. 安装 Git（通常已自带）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;--version&lt;/span&gt;&lt;span&gt; || &lt;/span&gt;&lt;span&gt;sudo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;apt&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;git&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-y&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 3. 安装 Claude Code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;@anthropic-ai/claude-code&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 4. 安装 cc-switch&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;npm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-g&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;cc-switch&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;15&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;16&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 5. 设置 API Key&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;17&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;echo&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&apos;export ANTHROPIC_API_KEY=&quot;sk-ant-api03-你的key&quot;&apos;&lt;/span&gt;&lt;span&gt; &amp;gt;&amp;gt; &lt;/span&gt;&lt;span&gt;~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;18&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;source&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;~/.bashrc&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;19&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;20&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 6. 启动&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;21&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# ===== 适用于 Windows (PowerShell 管理员) =====&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 1. 安装 Node.js LTS&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;winget install OpenJS.NodeJS.LTS&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 重启终端使 node 生效&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 2. 安装 Git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;winget install Git.Git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 重启终端或打开 Git Bash&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 3. 在 Git Bash 中运行：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;npm install &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;g &lt;/span&gt;&lt;/span&gt;&lt;span&gt;@anthropic&lt;/span&gt;&lt;span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;ai&lt;/span&gt;&lt;span&gt;/&lt;/span&gt;&lt;span&gt;claude&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;code&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;npm install &lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;g cc&lt;/span&gt;&lt;span&gt;-&lt;/span&gt;&lt;span&gt;switch&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 4. 设置环境变量（系统环境变量 UI），或 ~/.bashrc 中添加&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;15&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;export ANTHROPIC_API_KEY&lt;/span&gt;&lt;span&gt;=&lt;/span&gt;&lt;/span&gt;&lt;span&gt;&quot;sk-ant-api03-你的key&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;16&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;17&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;# 5. 启动&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;18&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;claude&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;</content:encoded></item><item><title>Rclone 挂载 WebDAV 远程存储到本地</title><link>https://blog.trrr.top/posts/blog/rclone-%E6%8C%82%E8%BD%BD-webdav-%E5%88%B0%E6%9C%AC%E5%9C%B0/</link><guid isPermaLink="true">https://blog.trrr.top/posts/blog/rclone-%E6%8C%82%E8%BD%BD-webdav-%E5%88%B0%E6%9C%AC%E5%9C%B0/</guid><description>本文以挂载 Alist WebDAV 为例，适用于所有支持 WebDAV 协议的远程存储。</description><pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;&lt;p&gt;本文以挂载 Alist WebDAV 为例，适用于所有支持 WebDAV 协议的远程存储。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;section&gt;&lt;h2&gt;1. 安装 Rclone&lt;a href=&quot;#1-安装-rclone&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://box.trrr.top/#/?code=941FF&quot; target=&quot;_blank&quot;&gt;https://box.trrr.top/#/?code=941FF&lt;/a&gt;&lt;/p&gt;&lt;p&gt;将下载好的 &lt;code&gt;rclone&lt;/code&gt; 二进制文件复制到系统路径并赋予执行权限：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;rm&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-f&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/usr/bin/rclone&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cp&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/path/to/rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/usr/bin&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;chmod&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;+x&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/usr/bin/rclone&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;验证安装：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;version&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;2. 安装依赖组件&lt;a href=&quot;#2-安装依赖组件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;apt-get&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;update&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;apt-get&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;install&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;fuse3&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;3. 配置远程存储&lt;a href=&quot;#3-配置远程存储&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;config&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;按提示操作：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;输入 &lt;code&gt;n&lt;/code&gt; 新建远程存储&lt;/li&gt;
+&lt;li&gt;输入名称（例如 &lt;code&gt;myremote&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;选择存储类型，WebDAV 对应 &lt;code&gt;webdav&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;填写 WebDAV 地址，例如 &lt;code&gt;http://127.0.0.1:5244/dav&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;选择认证方式并填写用户名、密码&lt;/li&gt;
+&lt;li&gt;确认保存&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;验证配置是否正确：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;lsd&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;myremote:&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;4. 创建本地挂载点&lt;a href=&quot;#4-创建本地挂载点&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;mkdir&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/home/remote&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;5. 挂载到本地&lt;a href=&quot;#5-挂载到本地&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;mount&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;myremote:&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/home/remote&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--header&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;Referer:&quot;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--multi-thread-streams&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;6&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--buffer-size&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;512M&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--vfs-fast-fingerprint&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--vfs-cache-mode&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;full&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--no-modtime&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--file-perms&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;0777&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--copy-links&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--allow-other&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--allow-non-empty&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--umask&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;000&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--daemon&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--cache-dir&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/home/cache/rclone&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;15&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--vfs-cache-max-size&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;15G&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;16&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--vfs-cache-max-age&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;24h&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;\&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;17&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;  &lt;/span&gt;&lt;span&gt;--dir-cache-time&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;1h&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;section&gt;&lt;h3&gt;常用参数说明&lt;a href=&quot;#常用参数说明&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--vfs-cache-mode full&lt;/code&gt;&lt;/td&gt;&lt;td&gt;启用完整缓存，支持随机读写&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--multi-thread-streams 6&lt;/code&gt;&lt;/td&gt;&lt;td&gt;多线程并发传输&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--buffer-size 512M&lt;/code&gt;&lt;/td&gt;&lt;td&gt;读写缓冲区大小&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--vfs-cache-max-size 15G&lt;/code&gt;&lt;/td&gt;&lt;td&gt;缓存目录最大容量&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--vfs-cache-max-age 24h&lt;/code&gt;&lt;/td&gt;&lt;td&gt;缓存文件最大存活时间&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--dir-cache-time 1h&lt;/code&gt;&lt;/td&gt;&lt;td&gt;目录列表缓存时间&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--allow-other&lt;/code&gt;&lt;/td&gt;&lt;td&gt;允许其他用户访问挂载点&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;--daemon&lt;/code&gt;&lt;/td&gt;&lt;td&gt;后台运行&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;自定义缓存目录&lt;a href=&quot;#自定义缓存目录&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;如果系统盘空间不足，可通过 &lt;code&gt;--cache-dir&lt;/code&gt; 指定缓存位置：&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;--cache-dir&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/mnt/mydisk/Caches/rclone&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;6. 卸载挂载&lt;a href=&quot;#6-卸载挂载&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;fusermount&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-qzu&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/home/remote&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h2&gt;7. 设置开机自启动&lt;a href=&quot;#7-设置开机自启动&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;section&gt;&lt;h3&gt;7.1 创建 systemd 服务文件&lt;a href=&quot;#71-创建-systemd-服务文件&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;nano&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;/etc/systemd/system/myremote.service&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;写入以下内容（将 &lt;code&gt;myremote&lt;/code&gt; 和挂载路径替换为实际值）：&lt;/p&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;[Unit]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;Description&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;Rclone Mount - myremote&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;After&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;network.target&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;[Service]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;Type&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;simple&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;ExecStartPre&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;-/bin/sleep 30&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;ExecStart&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;rclone mount myremote: /home/remote \&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--header &lt;/span&gt;&lt;span&gt;&quot;Referer:&quot;&lt;/span&gt;&lt;span&gt; \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--multi-thread-streams 6 \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--buffer-size 512M \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--vfs-fast-fingerprint \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--vfs-cache-mode full \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;14&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--no-modtime \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;15&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--file-perms 0777 \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;16&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--copy-links \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;17&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--allow-other \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;18&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--allow-non-empty \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;19&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--umask 000 \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;20&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--cache-dir /home/cache/rclone \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;21&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--vfs-cache-max-size 15G \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;22&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--vfs-cache-max-age 24h \&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;23&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;span&gt;  &lt;/span&gt;&lt;/span&gt;&lt;span&gt;--dir-cache-time 1h&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;24&lt;/div&gt;&lt;/div&gt;&lt;div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;25&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;[Install]&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;26&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;WantedBy&lt;/span&gt;&lt;span&gt;&lt;span&gt;=&lt;/span&gt;&lt;span&gt;default.target&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span&gt;展开&lt;/span&gt;&lt;span&gt;收起&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;7.2 启用并启动服务&lt;a href=&quot;#72-启用并启动服务&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;systemctl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;daemon-reload&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;systemctl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;enable&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;myremote.service&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;systemctl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;start&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;myremote.service&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;section&gt;&lt;h3&gt;7.3 查看服务状态&lt;a href=&quot;#73-查看服务状态&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;systemctl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;status&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;myremote.service&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item></channel></rss>
