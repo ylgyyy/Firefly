@@ -11,14 +11,14 @@
             "id": "08edea3560621409",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "src/content/posts/blog/_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅.md",
-                "mode": "source",
-                "source": false
+                "aFile": "scripts/notify-telegram.js",
+                "bFile": "scripts/notify-telegram.js",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅"
+              "icon": "diff",
+              "title": "Diff: notify-telegram.js  (Working Tree)"
             }
           },
           {
@@ -206,8 +206,8 @@
   },
   "active": "08edea3560621409",
   "lastOpenFiles": [
-    "src/content/posts/blog/_利用one-kvm把矿渣玩客云变成硬件级ipkvm远控神器.md",
     "src/content/posts/blog/_矿渣玩客云变废为宝-open-wrt旁路由-open-clash体验丝滑流畅.md",
+    "src/content/posts/blog/_利用one-kvm把矿渣玩客云变成硬件级ipkvm远控神器.md",
     "src/content/posts/blog/_如何将本地代码首次推送到-git-hub.md",
     "src/content/posts/blog/_安装claude-code的详细教程.md",
     "src/content/posts/blog/_123.md",
