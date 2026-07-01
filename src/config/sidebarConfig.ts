@@ -112,7 +112,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 是否在非文章详情页显示
 			showOnNonPostPage: false,
 		},
-		{
+				{
 			// 组件类型：分类组件
 			type: "categories",
 			// 是否启用该组件

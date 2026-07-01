@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史，用于 git diff 检测新文章
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
