@@ -49,11 +49,27 @@ function filePathToUrl(filePath) {
 /**
  * 获取本次 push 中新增的文章文件列表
  */
+/**
+ * Git 空树的 SHA（用于首次提交的 diff）
+ * @see https://stackoverflow.com/a/40884093
+ */
+const EMPTY_TREE_SHA = "4b825dc642cb6eb9a060e54bf899d7e5d1e48c42a";
+
 function getNewPostFiles() {
+  // 检测是否为仓库的首次提交
+  let hasParent = true;
   try {
-    // 获取变更的文件列表，只保留新增的 (A) 和修改的 (M)
+    execSync("git rev-parse --verify HEAD~1", { encoding: "utf-8", stdio: "pipe" });
+  } catch {
+    hasParent = false;
+  }
+
+  const baseRef = hasParent ? "HEAD~1" : EMPTY_TREE_SHA;
+  console.log(`📌 比较范围: ${baseRef === EMPTY_TREE_SHA ? "空树（首次提交）" : "HEAD~1"}..HEAD`);
+
+  try {
     const changedFiles = execSync(
-      'git diff --name-only --diff-filter=A HEAD~1 HEAD -- "src/content/posts/"',
+      `git diff --name-only --diff-filter=A ${baseRef} HEAD -- src/content/posts/`,
       { encoding: "utf-8" }
     ).trim();
 
@@ -66,21 +82,11 @@ function getNewPostFiles() {
       .split("\n")
       .filter((f) => /\.(md|mdx)$/i.test(f.trim()));
 
-    console.log(`📝 检测到 ${files.length} 个新增/修改的文章文件`);
+    console.log(`📝 检测到 ${files.length} 个新增文章文件`);
     return files;
   } catch (err) {
-    // 如果是首次提交，尝试获取所有文件
-    console.log("⚠️  无法比较 HEAD~1，尝试获取仓库中所有文章文件");
-    try {
-      const allFiles = execSync(
-        'git ls-files -- "src/content/posts/*.md" "src/content/posts/*.mdx"',
-        { encoding: "utf-8" }
-      ).trim();
-      return allFiles ? allFiles.split("\n") : [];
-    } catch {
-      console.error("❌ 无法获取文章文件列表");
-      return [];
-    }
+    console.error(`❌ 获取文章文件列表失败: ${err.message}`);
+    return [];
   }
 }
 
